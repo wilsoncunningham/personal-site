@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   # get "/your_first_screen" => "pages#first"
 
   get("/", :controller => "home", :action => "index")
+
+  get("/reading", :controller => "reading", :action => "home")
+
+  get("/career", :controller => "home", :action => "career")
   
 end
