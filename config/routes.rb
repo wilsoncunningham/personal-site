@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get("/reading", :controller => "reading", :action => "home")
 
   get("/career", :controller => "home", :action => "career")
+
+  get("/hiking", :controller => "home", :action => "hiking")
   
 end

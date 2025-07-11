@@ -6,4 +6,8 @@ class HomeController < ApplicationController
   def career
     render({:template => "career"})
   end
+
+  def hiking
+    render({:template => "hiking"})
+  end
 end
