@@ -126,7 +126,7 @@ p, a {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease;
   margin-left: 0;
-  margin-top: 4rem
+  margin-top: 2rem
 }
 .headshot:hover {
   transform: scale(1.02);
