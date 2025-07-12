@@ -134,11 +134,9 @@ p, a {
 }
 
 .hiking-banner {
-  width: 600px;
+  width: 100%;
   height: auto;
   object-fit: cover;
-  border-bottom: 3px solid #ff5370;
-  border-top: 3px solid #ff5370;
   display: block;
   margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
