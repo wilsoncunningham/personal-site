@@ -24,7 +24,7 @@ h1, h2, h3 {
   color: #e21a41;
 }
 
-p {
+p, a {
   font-family: "Lora", serif;
   color: #f6f2e5;
   font-size: 20px
@@ -33,21 +33,21 @@ p {
 .garamond {
   font-family: "EB Garamond", serif;
 }
-
 .lora {
   font-family: "Lora", serif;
 }
-
 .pt-serif {
   font-family: "PT Serif", serif;
 }
-
 .libre-franklin {
   font-family: "Libre Franklin";
 }
-
 .garamond {
   font-family: "Averia Serif Libre", serif;
+}
+
+.large-body {
+  font-size: 30px
 }
 
 .fire-red {
@@ -99,8 +99,22 @@ p {
   background-color: #99c794
 }
 
+.about-section {
+  padding-top: 8rem
+}
+
+.padded-row {
+  padding-top: 2rem;
+  padding-bottom: 2rem
+}
+
+.thin-row {
+  padding-top: 1rem;
+  padding-bottom: 1rem
+}
+
 /* You can also reset or override Bootstrap classes, for example: */
-.container {
+/* .container {
   max-width: none;
   padding: 2rem;
-}
+} */
