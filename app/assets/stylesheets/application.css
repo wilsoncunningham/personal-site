@@ -53,7 +53,6 @@ p {
 .fire-red {
   color: #e21a41;
 }
-
 .bg-fire-red {
   background-color: #e21a41 
 }
@@ -61,7 +60,6 @@ p {
 .dark-grey {
   color: #161618;
 }
-
 .bg-dark-grey {
   background-color: #161618
 }
@@ -69,17 +67,36 @@ p {
 .off-white {
   color: #f6f2e5
 }
-
 .bg-off-white {
   background-color: #f6f2e5
 }
 
 .ice-blue {
-  color: #7df6ff
+  color: #64ffda
+}
+.bg-ice-blue {
+  background-color: #64ffda
 }
 
-.bg-ice-blue {
-  background-color: #7df6ff
+.warm-gold {
+  color: #ffcc66
+}
+.bg-warm-gold {
+  background-color: #ffcc66
+}
+
+.lime {
+  color: #a8ff60
+}
+.bg-lime {
+  background-color: #a8ff60
+}
+
+.sage {
+  color: #99c794
+}
+.bg-sage {
+  background-color: #99c794
 }
 
 /* You can also reset or override Bootstrap classes, for example: */
