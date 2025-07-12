@@ -113,6 +113,11 @@ p, a {
   padding-bottom: 1rem
 }
 
+.publisher {
+  color: #999999;
+  font-size: 0.9em;
+}
+
 /* You can also reset or override Bootstrap classes, for example: */
 /* .container {
   max-width: none;
