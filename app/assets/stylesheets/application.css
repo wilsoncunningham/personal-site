@@ -21,36 +21,66 @@
 
 h1, h2, h3 {
   font-family: "EB Garamond", serif;
-  color: #ff5a31;
+  color: #e21a41;
 }
 
 p {
   font-family: "Lora", serif;
-  color: #433f3f;
+  color: #f6f2e5;
   font-size: 20px
 }
 
+.garamond {
+  font-family: "EB Garamond", serif;
+}
+
+.lora {
+  font-family: "Lora", serif;
+}
+
+.pt-serif {
+  font-family: "PT Serif", serif;
+}
+
+.libre-franklin {
+  font-family: "Libre Franklin";
+}
+
+.garamond {
+  font-family: "Averia Serif Libre", serif;
+}
+
 .fire-red {
-  color: #ff5a31;
+  color: #e21a41;
 }
 
 .bg-fire-red {
-  background-color: #ff5a31 
+  background-color: #e21a41 
 }
 
 .dark-grey {
-  color: #433f3f;
+  color: #161618;
 }
 
 .bg-dark-grey {
-  background-color: #433f3f
+  background-color: #161618
 }
 
-.cream {
-  color: #fffacf
+.off-white {
+  color: #f6f2e5
 }
 
-.bg-cream
+.bg-off-white {
+  background-color: #f6f2e5
+}
+
+.ice-blue {
+  color: #7df6ff
+}
+
+.bg-ice-blue {
+  background-color: #7df6ff
+}
 
 /* You can also reset or override Bootstrap classes, for example: */
 .container {
