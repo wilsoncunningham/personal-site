@@ -118,6 +118,21 @@ p, a {
   font-size: 0.9em;
 }
 
+.headshot {
+  width: 360px;
+  height: auto;
+  object-fit: cover;
+  /* border-radius: 50%; */
+  border-bottom: 3px solid #ff5370; /* your accent color */
+  display: block;
+  margin: 0 auto 1rem auto; /* center horizontally and add space below */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.7s ease;
+}
+.headshot:hover {
+  transform: scale(1.02);
+}
+
 /* You can also reset or override Bootstrap classes, for example: */
 /* .container {
   max-width: none;
