@@ -119,7 +119,8 @@ p, a {
   height: auto;
   object-fit: cover;
   /* border-radius: 50%; */
-  border-bottom: 3px solid #ff5370; /* your accent color */
+  border-bottom: 3px solid #ff5370;
+  border-top: 3px solid #ff5370;
   display: block;
   margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
