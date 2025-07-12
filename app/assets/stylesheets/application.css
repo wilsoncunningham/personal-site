@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+/* body {
+  font-family: "EB Garamond", serif;
+  background-color: #433f3f;
+} */
+
+h1, h2, h3 {
+  font-family: "EB Garamond", serif;
+  color: #ff5a31;
+}
+
+p {
+  font-family: "Lora", serif;
+  color: #433f3f;
+  font-size: 20px
+}
+
+.fire-red {
+  color: #ff5a31;
+}
+
+.bg-fire-red {
+  background-color: #ff5a31 
+}
+
+.dark-grey {
+  color: #433f3f;
+}
+
+.bg-dark-grey {
+  background-color: #433f3f
+}
+
+.cream {
+  color: #fffacf
+}
+
+.bg-cream
+
+/* You can also reset or override Bootstrap classes, for example: */
+.container {
+  max-width: none;
+  padding: 2rem;
+}
