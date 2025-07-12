@@ -134,16 +134,17 @@ p, a {
 }
 
 .gallery {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 400px;
   object-fit: cover;
   display: block;
   margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease;
-  margin-left: 0;
   margin-top: 2rem;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .gallery:hover {
   transform: scale(1.02);
