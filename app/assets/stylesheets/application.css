@@ -99,10 +99,6 @@ p, a {
   background-color: #99c794
 }
 
-.about-section {
-  padding-top: 8rem
-}
-
 .padded-row {
   padding-top: 2rem;
   padding-bottom: 2rem
@@ -119,7 +115,7 @@ p, a {
 }
 
 .headshot {
-  width: 360px;
+  width: 400px;
   height: auto;
   object-fit: cover;
   /* border-radius: 50%; */
@@ -128,6 +124,8 @@ p, a {
   margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease;
+  margin-left: 0;
+  margin-top: 4rem
 }
 .headshot:hover {
   transform: scale(1.02);
