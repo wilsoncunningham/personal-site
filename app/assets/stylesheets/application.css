@@ -27,7 +27,8 @@ h1, h2, h3 {
 p, a {
   font-family: "Lora", serif;
   color: #f6f2e5;
-  font-size: 20px
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .garamond {
@@ -129,6 +130,22 @@ p, a {
   margin-top: 2rem
 }
 .headshot:hover {
+  transform: scale(1.02);
+}
+
+.gallery {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem auto; /* center horizontally and add space below */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.7s ease;
+  margin-left: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem
+}
+.gallery:hover {
   transform: scale(1.02);
 }
 
