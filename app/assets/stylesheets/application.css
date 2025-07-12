@@ -133,6 +133,20 @@ p, a {
   transform: scale(1.02);
 }
 
+.hiking-banner {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 3px solid #ff5370;
+  border-top: 3px solid #ff5370;
+  display: block;
+  margin: 0 auto 1rem auto; /* center horizontally and add space below */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.7s ease;
+  margin-left: 0;
+  margin-top: 2rem
+}
+
 .gallery {
   width: auto;
   height: 400px;
@@ -142,12 +156,17 @@ p, a {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   margin-left: auto;
   margin-right: auto;
 }
 .gallery:hover {
   transform: scale(1.02);
+}
+
+.caption {
+  color: #999999;
+  font-size: 0.8em;
 }
 
 /* You can also reset or override Bootstrap classes, for example: */
