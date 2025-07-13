@@ -196,14 +196,35 @@ p, a {
   font-family: "Libre Franklin";
 }
 
-.legend_text {
-  color: #f6f2e5;
-  font-family: "EB Garamond";
-  font-style: normal
+.reading-log-table {
+  width: 70%;           /* narrower than container */
+  margin: 0 auto;       /* center horizontally */
 }
 
-.legend_box {
+
+.legend-text {
+  color: #f6f2e5;
+  font-family: "EB Garamond";
+  font-style: normal;
+  text-align: center;
+}
+
+.legend-box {
   border-bottom: 2px solid #e21a41;
+  text-align: center;
+}
+
+.book-title {
+  color: #f6f2e5;
+  font-family: "EB Garamond";
+  font-style: normal;
+  text-align: left;
+}
+
+.book-rating {
+  color: #f6f2e5;
+  font-family: "EB Garamond";
+  font-style: normal;
   text-align: center;
 }
 
