@@ -121,8 +121,8 @@ p, a {
   height: auto;
   object-fit: cover;
   /* border-radius: 50%; */
-  border-bottom: 3px solid #ff5370;
-  border-top: 3px solid #ff5370;
+  border-bottom: 3px solid #e21a41;
+  border-top: 3px solid #e21a41;
   display: block;
   margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -132,6 +132,22 @@ p, a {
 }
 .headshot:hover {
   transform: scale(1.02);
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block; /* allows the container to fit to image size */
+}
+
+.name-overlay {
+  position: relative;
+  bottom: 50px; /* adjust to overlap slightly */
+  left: 15%;   /* or center: use left: 50%; transform: translateX(-50%); */
+  color: #e21a41; /* your accent color */
+  font-family: "EB Garamond", serif; /* keep it elegant */
+  font-size: 4rem;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0); /* optional: transparent or slight background for contrast */
 }
 
 .hiking-banner {
