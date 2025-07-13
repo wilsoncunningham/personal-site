@@ -127,8 +127,8 @@ p, a {
   margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease;
-  margin-left: 0;
-  margin-top: 2rem
+
+  margin: 0
 }
 .headshot:hover {
   transform: scale(1.02);
@@ -140,14 +140,13 @@ p, a {
 }
 
 .name-overlay {
-  position: relative;
-  bottom: 50px; /* adjust to overlap slightly */
-  left: 15%;   /* or center: use left: 50%; transform: translateX(-50%); */
-  color: #e21a41; /* your accent color */
-  font-family: "EB Garamond", serif; /* keep it elegant */
-  font-size: 4rem;
+  position: static; /* or remove position entirely */
+  font-family: "EB Garamond", serif;
+  font-size: 8rem;
   font-style: italic;
-  background: rgba(0, 0, 0, 0); /* optional: transparent or slight background for contrast */
+  color: #e21a41;
+  line-height: 0.9; /* adjust line spacing if needed */
+  margin: 0; /* remove any margin */
 }
 
 .hiking-banner {
