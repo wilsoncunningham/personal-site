@@ -121,6 +121,12 @@ p, a {
   font-family: "Libre Franklin"
 }
 
+.author {
+  color: #ffcc66;
+  font-size: 0.7em;
+  font-family: "PT Serif"
+}
+
 .headshot {
   width: 400px;
   height: auto;
