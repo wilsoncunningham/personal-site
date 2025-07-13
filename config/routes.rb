@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get("/", :controller => "home", :action => "index")
 
-  get("/reading", :controller => "reading", :action => "home")
+  get("/reading", :controller => "books", :action => "index")
 
   get("/career", :controller => "home", :action => "career")
 
