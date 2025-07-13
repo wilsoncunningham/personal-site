@@ -21,6 +21,7 @@
 
 h1, h2, h3 {
   font-family: "EB Garamond", serif;
+  font-style: italic;
   color: #e21a41;
 }
 
@@ -193,6 +194,17 @@ p, a {
   color: #999999;
   font-size: 0.8em;
   font-family: "Libre Franklin";
+}
+
+.legend_text {
+  color: #f6f2e5;
+  font-family: "EB Garamond";
+  font-style: normal
+}
+
+.legend_box {
+  border-bottom: 2px solid #e21a41;
+  text-align: center;
 }
 
 /* You can also reset or override Bootstrap classes, for example: */
