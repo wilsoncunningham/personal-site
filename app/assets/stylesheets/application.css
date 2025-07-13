@@ -100,12 +100,12 @@ p, a {
   background-color: #99c794
 }
 
-.padded-row {
+.vpadding-thick {
   padding-top: 2rem;
   padding-bottom: 2rem
 }
 
-.thin-row {
+.vpadding-thin {
   padding-top: 1rem;
   padding-bottom: 1rem
 }
