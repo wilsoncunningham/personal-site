@@ -28,13 +28,13 @@ class BooksController < ApplicationController
     the_book.rating = params.fetch("query_rating")
     the_book.notes = params.fetch("query_notes")
     the_book.start_date = params.fetch("query_start_date")
-    the_book.end_date= params.fetch("end_date")
+    the_book.end_date = params.fetch("query_end_date")
 
     if the_book.valid?
       the_book.save
-      redirect_to("/books", { :notice => "Book created successfully." })
+      redirect_to("/reading", { :notice => "Book created successfully." })
     else
-      redirect_to("/books", { :alert => the_book.errors.full_messages.to_sentence })
+      redirect_to("/reading", { :alert => the_book.errors.full_messages.to_sentence })
     end
   end
 
@@ -47,13 +47,13 @@ class BooksController < ApplicationController
     the_book.rating = params.fetch("query_rating")
     the_book.notes = params.fetch("query_notes")
     the_book.start_date = params.fetch("query_start_date")
-    the_book.end_date= params.fetch("end_date")
+    the_book.end_date = params.fetch("query_end_date")
 
     if the_book.valid?
       the_book.save
-      redirect_to("/books/#{the_book.id}", { :notice => "Book updated successfully."} )
+      redirect_to("/reading/#{the_book.id}", { :notice => "Book updated successfully."} )
     else
-      redirect_to("/books/#{the_book.id}", { :alert => the_book.errors.full_messages.to_sentence })
+      redirect_to("/reading/#{the_book.id}", { :alert => the_book.errors.full_messages.to_sentence })
     end
   end
 
@@ -63,7 +63,7 @@ class BooksController < ApplicationController
 
     the_book.destroy
 
-    redirect_to("/books", { :notice => "Book deleted successfully."} )
+    redirect_to("/reading", { :notice => "Book deleted successfully."} )
   end
 
 end

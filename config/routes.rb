@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get("/", :controller => "home", :action => "index")
 
   get("/reading", :controller => "books", :action => "index")
+  post("/reading", :controller => "books", :action => "create")
 
   get("/career", :controller => "home", :action => "career")
 
