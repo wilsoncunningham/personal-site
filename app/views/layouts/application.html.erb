@@ -41,13 +41,14 @@
             <% if current_user && current_user.admin? %>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle libre-franklin" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Admin
+                  ADMIN
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/admin">Admin Home</a></li>
-                  <li><a class="dropdown-item" href="/admin/books">Book Form</a></li>
-                  <li><a class="dropdown-item" href="/admin/images">Image Form</a></li>
-                  <li><a class="dropdown-item" href="/admin/features">Features Form</a></li>
+                  <li><a class="dropdown-item libre-franklin" href="/admin">Dashboard</a></li>
+                  <li><a class="dropdown-item libre-franklin" href="/admin/books">Book Form</a></li>
+                  <li><a class="dropdown-item libre-franklin" href="/admin/images">Image Form</a></li>
+                  <li><a class="dropdown-item libre-franklin" href="/admin/features">Features Form</a></li>
+                  <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item libre-franklin" %></li>
                 </ul>
               </li>
             <% end %>
