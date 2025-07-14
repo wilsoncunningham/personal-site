@@ -228,7 +228,7 @@ p, a {
   text-align: center;
 }
 
-.table p {
+.table p, a{
   color: white;
   font-family: "Libre Franklin";
   text-align: left;
@@ -241,6 +241,10 @@ p, a {
 .notes-border {
   border-top: 1px solid #e21a41;
   border-bottom: 1px solid #e21a41;
+}
+
+.clickable-row {
+  cursor: pointer;
 }
 
 /* You can also reset or override Bootstrap classes, for example: */
