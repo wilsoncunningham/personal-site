@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   http_basic_authenticate_with(
     name: ENV["ADMIN_USER"],
     password: ENV["ADMIN_PASSWORD"],
-    only: [:new, :create, :edit, :update, :destroy]
+    only: [:create, :update, :destroy]
   )
 
   def index
