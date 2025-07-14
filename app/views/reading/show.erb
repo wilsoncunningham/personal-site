@@ -1,0 +1,52 @@
+<div class="container py-5">
+
+  <p>The book entry is: <%= @the_book %>
+  <p>The book id is: <%= @the_book.id %>
+  <p>The book title is: <%= @the_book.title %>
+
+  <h1 class="off-white">Edit Book Entry</h1>
+
+  <%= form_with model: @the_book, url: "/reading/#{@the_book.id}", method: :patch, local: true do |f| %>
+    <div class="mb-3 off-white">
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title, class: "form-control", value: @the_book.title %>
+    </div>
+
+    <div class="mb-3 off-white">
+      <%= f.label :author, "Author" %>
+      <%= f.text_field :author, class: "form-control", value: @the_book.author %>
+    </div>
+
+    <div class="mb-3 off-white">
+      <%= f.label :notes, "Notes" %>
+      <%= f.text_area :notes, class: "form-control", rows: 8 do %>
+        <%= @the_book.notes %>
+      <% end %>
+    </div>
+
+    <div class="mb-3 off-white">
+      <%= f.label :rating, "Rating" %>
+      <%= f.number_field :rating, class: "form-control", value: @the_book.rating, step: 0.1 %>
+    </div>
+
+    <div class="mb-3 off-white">
+      <%= f.label :start_date, "Start Date" %>
+      <%= f.date_field :start_date, class: "form-control", value: @the_book.start_date %>
+    </div>
+
+    <div class="mb-3 off-white">
+      <%= f.label :end_date, "End Date" %>
+      <%= f.date_field :end_date, class: "form-control", value: @the_book.end_date %>
+    </div>
+
+    <%= f.submit "Update Book", class: "btn btn-primary" %>
+  <% end %>
+
+  <hr>
+
+  <%= button_to "Delete Book", "/reading/#{@the_book.id}", 
+      method: :delete, 
+      data: { confirm: "Are you sure you want to permanently delete this book?" }, 
+      class: "btn btn-danger" %>
+
+</div>

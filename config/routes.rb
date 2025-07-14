@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   get("/", :controller => "home", :action => "index")
 
   get("/reading", :controller => "books", :action => "index")
+  get("/reading/:book_id", :controller => "books", :action => "show")
+  patch("/reading/:book_id", { :controller => "books", :action => "update" })
   post("/reading", :controller => "books", :action => "create")
+  delete("/reading/:book_id", { :controller => "books", :action => "destroy" })
 
   get("/career", :controller => "home", :action => "career")
 
