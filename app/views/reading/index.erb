@@ -17,7 +17,8 @@
     <div class="col-9">
       <p>
         To help myself discover what I love to read and to simply keep track, I have kept a detailed log of what I have been reading, giving ratings for each of my reads.
-        <br><br>
+      </p>
+      <p>
         <em><u>A note:</u></em> To see my notes for each book, click on its row to expand it. My notes are very casual and my arguments may be left entirely unjustified. Treat these notes more as journal entries or reflections rather than formal reviews. I write these notes for myself to look back on, and I am posting them here as well simply as an invitation to thought. Finally, <span class="fire-red"><b><em>SPOILER ALERT:</em></b></span> My notes are filled with spoilers. I will thus leave them as drop-downs, only visible once clicked on. 
       </p>
     </div>
@@ -38,8 +39,10 @@
             <td>
               <%= book.title %><br>by <%= book.author %>
 
-              <div id="notes<%= book.id %>" class="collapse mt-2 text-indent">
-                <%= book.notes.html_safe %>
+              <div id="notes<%= book.id %>" class="collapse mt-2 text-indent notes-border">
+                <p>
+                  <%= book.notes.html_safe %>
+                </p>
               </div>
         
             </td>
