@@ -25,38 +25,40 @@
 
   <h3 class="fire-red">Add a New Book Entry</h3>
 
-  <%= form_tag("/reading", method: "post", class: "mb-5, off-white") do %>
-    <div class="mb-3">
-      <%= label_tag(:query_title, "Title", class: "form-label") %>
-      <%= text_field_tag(:query_title, nil, class: "form-control") %>
-    </div>
+  <% if admin_signed_in? %>
+    <%= form_tag("/reading", method: "post", class: "mb-5, off-white") do %>
+      <div class="mb-3">
+        <%= label_tag(:query_title, "Title", class: "form-label") %>
+        <%= text_field_tag(:query_title, nil, class: "form-control") %>
+      </div>
 
-    <div class="mb-3">
-      <%= label_tag(:query_author, "Author", class: "form-label") %>
-      <%= text_field_tag(:query_author, nil, class: "form-control") %>
-    </div>
+      <div class="mb-3">
+        <%= label_tag(:query_author, "Author", class: "form-label") %>
+        <%= text_field_tag(:query_author, nil, class: "form-control") %>
+      </div>
 
-    <div class="mb-3">
-      <%= label_tag(:query_rating, "Rating", class: "form-label") %>
-      <%= number_field_tag(:query_rating, nil, step: 0.5, class: "form-control") %>
-    </div>
+      <div class="mb-3">
+        <%= label_tag(:query_rating, "Rating", class: "form-label") %>
+        <%= number_field_tag(:query_rating, nil, step: 0.5, class: "form-control") %>
+      </div>
 
-    <div class="mb-3">
-      <%= label_tag(:query_start_date, "Start Date", class: "form-label") %>
-      <%= date_field_tag(:query_start_date, nil, class: "form-control") %>
-    </div>
+      <div class="mb-3">
+        <%= label_tag(:query_start_date, "Start Date", class: "form-label") %>
+        <%= date_field_tag(:query_start_date, nil, class: "form-control") %>
+      </div>
 
-    <div class="mb-3">
-      <%= label_tag(:query_end_date, "End Date", class: "form-label") %>
-      <%= date_field_tag(:query_end_date, nil, class: "form-control") %>
-    </div>
+      <div class="mb-3">
+        <%= label_tag(:query_end_date, "End Date", class: "form-label") %>
+        <%= date_field_tag(:query_end_date, nil, class: "form-control") %>
+      </div>
 
-    <div class="mb-3">
-      <%= label_tag(:query_notes, "Notes", class: "form-label") %>
-      <%= text_area_tag(:query_notes, nil, rows: 4, class: "form-control") %>
-    </div>
+      <div class="mb-3">
+        <%= label_tag(:query_notes, "Notes", class: "form-label") %>
+        <%= text_area_tag(:query_notes, nil, rows: 4, class: "form-control") %>
+      </div>
 
-    <%= submit_tag("Add Book", class: "btn btn-light") %>
+      <%= submit_tag("Add Book", class: "btn btn-light") %>
+    <% end %>
   <% end %>
 
 
