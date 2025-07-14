@@ -37,8 +37,22 @@
             <li class="nav-item">
               <a class="libre-franklin nav-link" href="/career">CAREER</a>
             </li>
-          </ul>
 
+            <% if current_user && current_user.admin? %>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle libre-franklin" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Admin
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/admin">Admin Home</a></li>
+                  <li><a class="dropdown-item" href="/admin/books">Book Form</a></li>
+                  <li><a class="dropdown-item" href="/admin/images">Image Form</a></li>
+                  <li><a class="dropdown-item" href="/admin/features">Features Form</a></li>
+                </ul>
+              </li>
+            <% end %>
+
+          </ul>
         </div>
       </div>
     </nav>
