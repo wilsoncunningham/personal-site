@@ -46,7 +46,9 @@
         
             </td>
             <td>
-              <% if book.start_date.month == book.end_date.month %>
+              <% if book.start_date == book.end_date %>
+                <%= book.start_date.strftime("%B %-d, %Y") %>
+              <% elsif book.start_date.month == book.end_date.month %>
                 <%= book.start_date.strftime("%B %-d") %>–<%= book.end_date.strftime("%-d, %Y") %>
               <% else %>
                 <%= book.start_date.strftime("%B %-d") %> – <%= book.end_date.strftime("%B %-d, %Y") %>
