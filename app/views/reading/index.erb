@@ -26,8 +26,10 @@
 
   <div class="vpadding-thick">
 
-    <a class="" href="/admin/books">New Book</a>
-    
+    <% if current_user && current_user.admin? %>
+      <a class="" href="/admin/books">New Book</a>
+    <% end %>
+
     <table class="table table-striped table-dark table-hover reading-log-table libre-franklin">
       <thead>
         <tr>
