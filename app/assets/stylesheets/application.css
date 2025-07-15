@@ -19,6 +19,16 @@
   background-color: #433f3f;
 } */
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 h1, h2, h3 {
   font-family: "EB Garamond", serif;
   font-style: italic;
@@ -28,7 +38,7 @@ h1, h2, h3 {
 p, a {
   font-family: "Lora", serif;
   color: #f6f2e5;
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
@@ -49,7 +59,7 @@ p, a {
 }
 
 .large-body {
-  font-size: 30px
+  font-size: 1.875rem
 }
 
 .fire-red {
@@ -128,23 +138,8 @@ p, a {
   font-family: "PT Serif"
 }
 
-.headshot {
-  width: 400px;
-  height: auto;
-  object-fit: cover;
-  border-bottom: 3px solid #e21a41;
-  border-top: 3px solid #e21a41;
-  display: block;
-  margin: 0 auto 1rem auto; /* center horizontally and add space below */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.7s ease;
-  margin: 0
-}
-.headshot:hover {
-  transform: scale(1.02);
-}
 
-.headshot-alt {
+.headshot {
 
   max-width: 400px; /* or any value you like */
   width: 60%;
@@ -158,6 +153,9 @@ p, a {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease;
   margin: 0
+}
+.headshot:hover {
+  transform: scale(1.02);
 }
 
 .profile-container {
