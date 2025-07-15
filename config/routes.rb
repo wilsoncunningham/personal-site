@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get("/career", :controller => "home", :action => "career")
 
-  get("/hiking", :controller => "home", :action => "hiking")
+  get("/hiking", :controller => "hiking", :action => "index")
 
   get("/admin", { :controller => "admin", :action => "dashboard" })
   get("/admin/books", { :controller => "admin", :action => "books" })
