@@ -235,6 +235,30 @@ p, a {
   transform: scale(1.02);
 }
 
+.gallery-alt {
+  max-height: 400px;
+  min-height: 260px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 2rem 0 0.5rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.7s ease;
+}
+
+.gallery-alt:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 576px) {
+  .gallery-alt {
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 .gallery-career {
   width: 100%;
   aspect-ratio: 4 / 3; /* or 3 / 4 if you want taller images */
