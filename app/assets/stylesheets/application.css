@@ -211,10 +211,18 @@ p, a {
   font-family: "Libre Franklin";
 }
 
-.custom-modal-bg .modal-content {
+.bg-modal-dark .modal-content {
   background-color: #161618; 
   color: #f6f2e5; 
 }
+
+
+/* .modal-content {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  color: #f6f2e5;
+} */
 
 .reading-log-table {
   width: 70%;           /* narrower than container */
