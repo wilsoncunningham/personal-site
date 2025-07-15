@@ -256,7 +256,8 @@ p, a {
   text-align: center;
 }
 
-.table p, a{
+.table p, 
+.table a{
   color: white;
   font-family: "Libre Franklin";
   text-align: left;
