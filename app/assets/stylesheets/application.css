@@ -165,15 +165,22 @@ p, a {
   display: inline-block; /* allows the container to fit to image size */
 }
 
-.homepage-name {
-  position: static; /* or remove position entirely */
+
+.homepage-name div {
+  font-size: calc(3.5rem + 2vw);
   font-family: "EB Garamond", serif;
-  font-size: 8rem;
-  font-style: italic;
   color: #e21a41;
-  line-height: 0.9; /* adjust line spacing if needed */
-  margin: 0; /* remove any margin */
+  font-style: italic;
+  line-height: 0.8;
+  margin: 0;
 }
+
+@media (min-width: 1200px) {
+  .homepage-name div {
+    font-size: 8rem;
+  }
+}
+
 
 .hiking-banner {
   width: 100%;
