@@ -140,20 +140,23 @@ p, a {
 
 
 .headshot {
-
-  max-width: 400px; /* or any value you like */
+  max-width: 400px;
   width: 60%;
   height: auto;
-
   object-fit: cover;
   border-bottom: 3px solid #e21a41;
   border-top: 3px solid #e21a41;
   display: block;
-  margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.7s ease;
-  margin: 0
+  transition: opacity 1.5s ease, transform 0.7s ease;
+  opacity: 0; /* Start invisible */
+  margin: 0;
 }
+
+.headshot.visible {
+  opacity: 1; /* Fade to visible */
+}
+
 .headshot:hover {
   transform: scale(1.02);
 }
@@ -171,6 +174,11 @@ p, a {
   font-style: italic;
   line-height: 0.8;
   margin: 0;
+
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1.5s ease forwards;
+  animation-delay: 0.7s;
 }
 
 @media (min-width: 1200px) {
@@ -178,6 +186,14 @@ p, a {
     font-size: 8rem;
   }
 }
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 
 .hiking-banner {
