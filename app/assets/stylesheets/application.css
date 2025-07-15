@@ -341,10 +341,6 @@ p, a {
   border-bottom: 1px solid #e21a41;
 }
 
-.clickable-row {
-  cursor: pointer;
-}
-
 /* You can also reset or override Bootstrap classes, for example: */
 /* .container {
   max-width: none;
