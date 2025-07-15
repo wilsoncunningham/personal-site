@@ -132,18 +132,32 @@ p, a {
   width: 400px;
   height: auto;
   object-fit: cover;
-  /* border-radius: 50%; */
   border-bottom: 3px solid #e21a41;
   border-top: 3px solid #e21a41;
   display: block;
   margin: 0 auto 1rem auto; /* center horizontally and add space below */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease;
-
   margin: 0
 }
 .headshot:hover {
   transform: scale(1.02);
+}
+
+.headshot-alt {
+
+  max-width: 400px; /* or any value you like */
+  width: 60%;
+  height: auto;
+
+  object-fit: cover;
+  border-bottom: 3px solid #e21a41;
+  border-top: 3px solid #e21a41;
+  display: block;
+  margin: 0 auto 1rem auto; /* center horizontally and add space below */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.7s ease;
+  margin: 0
 }
 
 .profile-container {
@@ -151,7 +165,7 @@ p, a {
   display: inline-block; /* allows the container to fit to image size */
 }
 
-.name-overlay {
+.homepage-name {
   position: static; /* or remove position entirely */
   font-family: "EB Garamond", serif;
   font-size: 8rem;
