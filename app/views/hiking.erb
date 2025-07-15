@@ -46,7 +46,7 @@
         { src: "hiking/flatiron-2.jpg", caption: "Flatiron, Superstition Mountains, Arizona", alt: "Hiker standing on a rocky ledge with expansive desert and mountain views from Flatiron in Arizona" },
         { src: "hiking/sedona-red.JPG", caption: "Sedona, Arizona", alt: "Red rock formations glowing at sunset under dramatic clouds in Sedona, Arizona" },
         { src: "hiking/oak-creek.jpg", caption: "Oak Creek, Sedona, Arizona", alt: "Narrow canyon with steep rock walls and trees above a wet, rocky creek bed at Oak Creek in Sedona, Arizona" },
-        { src: "hiking/flatiron-1.jpg", caption: "Flatiron, Superstition Mountains, Arizona", alt: "Hiker standing on summit with wide desert landscape and mountain ridges in the distance at Flatiron, Arizona" }
+        { src: "hiking/flatiron-1.jpg", caption: "Superstition Peak 5024, Arizona", alt: "Hiker standing on summit with wide desert landscape and mountain ridges in the distance at Flatiron, Arizona" }
         ]
       %>
 
@@ -62,33 +62,34 @@
   </div>
 
 
-
-  <!-- Modal -->
-  <div class="modal fade bg-modal-dark" id="galleryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!--Temporarily Disabling Uuntil Fully Operational-->
+<!---->
+   Modal 
+<!--  <div class="modal fade bg-modal-dark" id="galleryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content bg-modal-content">
         <div class="modal-body">
 
-          <!--Carousel-->
-          <div id="carouselExampleCaptions" class="carousel slide">
+          <!--Carousel-->-->
+<!--          <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-inner">
 
 
               <div class="carousel-item active">
-                <%= image_tag "hiking/sedona-red.JPG", alt: "Photo of Wilson Cunningham", class: "gallery" %>
-                <div class="carousel-caption d-none d-md-block">
+                <%#= image_tag "hiking/sedona-red.JPG", alt: "Photo of Wilson Cunningham", class: "gallery" %>-->
+<!--                <div class="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>Some representative placeholder content for the first slide.</p>
                 </div>
               </div>
 
-              <% @gallery_images.each_with_index do |image, index| %>
-                <div class="carousel-item">
-                  <%= image_tag "hiking/#{image[:file]}", class: "gallery", data: { bs_index: index }, alt: image[:caption] %>
-                  <p class="caption text-end"><%= image[:caption] %></p>
+              <%# @gallery_images.each_with_index do |image, index| %>-->
+<!--                <div class="carousel-item">-->
+                  <%#= image_tag "hiking/#{image[:file]}", class: "gallery", data: { bs_index: index }, alt: image[:caption] %>
+<!--                  <p class="caption text-end"><%#= image[:caption] %></p>
                 </div>
-              <% end %>
-
+              <%# end %>-->
+<!--
 
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -107,6 +108,6 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 
 </div>
