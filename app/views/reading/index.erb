@@ -55,12 +55,6 @@
             
             <td  class="">
               <%= book.title %><br>by <%= book.author %>
-
-              <div id="notes<%= book.id %>" class="collapse mt-2 text-indent notes-border">
-                <p>
-                  <%= book.notes.html_safe %>
-                </p>
-              </div>
             </td>
 
             <td  class="">
@@ -75,10 +69,20 @@
             <td  class="">
               <%= book.rating %>
             </td>
-            <td  class="align-top">
+            <td  class="align-middle">
               <button type="button" class="btn btn-light btn-sm" data-bs-toggle="collapse" data-bs-target="#notes<%= book.id %>" aria-expanded="false">
                 Notes
               </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="4">
+              <div id="notes<%= book.id %>" class="collapse mt-2 text-indent notes-border">
+                <p>
+                  <%= book.notes.html_safe %>
+                </p>
+              </div>
             </td>
           </tr>
         <% end %>
