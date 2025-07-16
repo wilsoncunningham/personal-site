@@ -20,5 +20,8 @@ Rails.application.routes.draw do
 
   get("/admin", { :controller => "admin", :action => "dashboard" })
   get("/admin/books", { :controller => "admin", :action => "books" })
+    
+  get("/privacy_policy", { :controller => "home", :action => "privacy_policy" })
+  get("/cookie_settings", { :controller => "home", :action => "cookie_settings" })
   
 end

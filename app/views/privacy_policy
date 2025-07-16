@@ -1,0 +1,91 @@
+<!-- <%= stylesheet_link_tag "application", "privacy-policy-reset", media: "all" %> -->
+
+<article class="privacy-policy container mx-auto py-8 px-4">
+  <h1 class="text-2xl font-bold mb-4 off-white">Privacy Policy</h1>
+  <p class="mb-6"><strong>Last updated:</strong> July 16, 2025</p>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">1. Introduction</h2>
+  <p class="mb-4">
+    Welcome to WilsonCunningham.com. This Privacy Policy explains how we collect, use, and protect information when you visit 
+    <a href="https://www.WilsonCunningham.com">
+      https://www.WilsonCunningham.com
+    </a> (the “Site”).
+  </p>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">2. Information We Collect</h2>
+  <ul class="list-disc list-inside mb-4">
+    <li>
+      <strong>Analytics Data:</strong> We use Google Analytics (GA4) to understand site usage.  
+      GA collects standard log data (e.g. your IP address, pages you view, browser type, device, and approximate location).
+    </li>
+    <li>
+      <strong>Cookies &amp; Similar Technologies:</strong> We place cookies and use localStorage only for essential site functionality 
+      and, for EU/UK visitors, after consent, for analytics. You can control cookie preferences at any time via your browser settings.
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">3. How We Use Your Data</h2>
+  <ul class="list-disc list-inside mb-4">
+    <li>To monitor and improve site performance and content.</li>
+    <li>To generate aggregated, anonymous reports on visitor demographics and behavior.</li>
+    <li>To maintain basic security (e.g. thwarting abusive traffic).</li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">4. Cookie Consent for EU/UK Visitors</h2>
+  <p class="mb-4">
+    If you’re browsing from the European Union or the United Kingdom, you’ll see a cookie-consent banner on your first visit.  
+    We do not drop any non-essential cookies until you click “Accept.” You may withdraw consent at any time by 
+      <a href="cookie_settings" target="_blank">
+        clicking here
+      </a>.
+  </p>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">5. Data Sharing &amp; Third Parties</h2>
+  <p class="mb-4">
+    We do not sell, rent, or share your personal information with third parties, except:
+  </p>
+  <ul class="list-disc list-inside mb-4">
+    <li>
+      <strong>Google:</strong> as part of Google Analytics’ standard service.  
+      See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy Policy</a>.
+    </li>
+    <li>
+      <strong>Service providers:</strong> such as our hosting or CDN provider, only to the extent necessary to run the Site.
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">6. Your Rights</h2>
+  <p class="mb-4">
+    Under GDPR, UK GDPR, and other privacy laws, visitors from covered jurisdictions have the right to:
+  </p>
+  <ul class="list-disc list-inside mb-4">
+    <li>Access the data we hold about you.</li>
+    <li>Request correction or deletion of your data.</li>
+    <li>Object to or restrict processing.</li>
+  </ul>
+  <p class="mb-4">
+    To exercise these rights—or if you have any questions—please contact us at 
+    <a href="https://www.linkedin.com/in/wilson-cunningham-b7b4a2223/" target="_blank">
+      LinkedIn
+    </a>.
+  </p>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">7. Data Retention</h2>
+  <p class="mb-4">
+    We retain analytics data for up to 14 months (the default GA4 retention period). After that, it’s automatically deleted.
+  </p>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">8. Changes to This Policy</h2>
+  <p class="mb-4">
+    We may update this policy from time to time. The “Last updated” date above will always reflect the most recent revision.  
+    We encourage you to revisit this page periodically.
+  </p>
+
+  <h2 class="text-xl font-semibold mt-4 mb-2">9. Contact Us</h2>
+  <p>
+    If you have questions or concerns about this Privacy Policy, please email 
+    <a href="https://www.linkedin.com/in/wilson-cunningham-b7b4a2223/" target="_blank">
+      LinkedIn
+    </a>.
+  </p>
+</article>

@@ -1,0 +1,48 @@
+.privacy-policy {
+  background-color: #fff ;
+  color: #212529 ;
+  padding: 1rem ;
+}
+
+.privacy-policy h1 {
+  font-family: "Libre Franklin";
+  color: black;
+  font-size: 2.5rem ;
+  font-weight: 500 ;
+  line-height: 1.2 ;
+  margin: 0 0 0.5rem ;
+}
+.privacy-policy h2 {
+  font-family: "Libre Franklin";
+  color: black;
+  font-size: 2rem ;
+  font-weight: 500 ;
+  line-height: 1.2 ;
+  margin: 0 0 0.5rem ;
+}
+.privacy-policy p {
+  font-family: "Libre Franklin";
+  color: black;
+  margin: 0 0 1rem ;
+}
+.privacy-policy ul,
+.privacy-policy ol {
+  font-family: "Libre Franklin";
+  color: black;
+  margin: 0 0 1rem ;
+  padding-left: 2rem ;
+}
+.privacy-policy li {
+  font-family: "Libre Franklin";
+  color: black;
+  margin: 0 0 0.5rem ;
+}
+.privacy-policy a {
+  font-family: "Libre Franklin";
+  color: black;
+  color: #0d6efd ;
+  text-decoration: underline ;
+}
+.privacy-policy a:hover {
+  color: #0a58ca ;
+}
