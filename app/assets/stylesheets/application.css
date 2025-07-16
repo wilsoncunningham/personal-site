@@ -341,6 +341,20 @@ p, a {
   border-bottom: 1px solid #e21a41;
 }
 
+.footer-box {
+  background-color: #2b3035;
+}
+
+.footer-link {
+  font-family: "Libre Franklin";
+  color: #989695;
+  font-size: 0.9em;
+}
+
+.footer-list-border {
+  border-bottom: 3px solid #e21a41;
+}
+
 /* You can also reset or override Bootstrap classes, for example: */
 /* .container {
   max-width: none;
