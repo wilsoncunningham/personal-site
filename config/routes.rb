@@ -23,5 +23,7 @@ Rails.application.routes.draw do
     
   get("/privacy_policy", { :controller => "home", :action => "privacy_policy" })
   get("/cookie_settings", { :controller => "home", :action => "cookie_settings" })
+
+  get "/healthz", to: proc { [200, {}, ["OK"]] }
   
 end
