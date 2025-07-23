@@ -26,6 +26,6 @@ Rails.application.routes.draw do
 
   get "/healthz", to: proc { [200, {}, ["OK"]] }
 
-  get("/bins_and_balls", :controller => "admin", :action => "bins_and_balls")
+  get("/bins_and_balls", :controller => "home", :action => "bins_and_balls")
   
 end

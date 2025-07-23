@@ -1,0 +1,17 @@
+<div class="off-white">
+  <h1>Bins and Balls</h1>
+
+  <label for="pointEstimate">Enter your expected value (e.g. monthly benefit):</label>
+  <input type="number" id="pointEstimate" placeholder="e.g. 1100" />
+  <button id="generateBins">Generate Bins</button>
+
+  <div id="binsContainer" style="display: flex; gap: 20px; margin-top: 30px; overflow-x: auto;"></div>
+
+  <p>Balls remaining: <span id="ballsRemaining">20</span></p>
+  <button id="submitBtn" disabled>Submit</button>
+
+  <h3>Result:</h3>
+  <pre id="output"></pre>
+
+  <%= javascript_include_tag "bins_and_balls" %>
+</div>>
