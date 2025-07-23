@@ -20,6 +20,11 @@ class BooksController < ApplicationController
     render({ :template => "reading/show" })
   end
 
+  def new_book_form
+    @book = Book.new
+    render(:template => "reading/new")
+  end
+
   def create
     the_book = Book.new
     the_book.title = params.fetch("query_title")

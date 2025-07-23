@@ -19,13 +19,13 @@ Rails.application.routes.draw do
   get("/hiking", :controller => "hiking", :action => "index")
 
   get("/admin", { :controller => "admin", :action => "dashboard" })
-  get("/admin/books", { :controller => "admin", :action => "books" })
+  get("/admin/new_book", { :controller => "books", :action => "new_book_form" })
     
   get("/privacy_policy", { :controller => "home", :action => "privacy_policy" })
   get("/cookie_settings", { :controller => "home", :action => "cookie_settings" })
 
   get "/healthz", to: proc { [200, {}, ["OK"]] }
 
-  get("/bins_and_balls", :controller => "home", :action => "bins_and_balls")
+  get("/bins_and_balls", :controller => "admin", :action => "bins_and_balls")
   
 end
