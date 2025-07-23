@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
   get("/hiking", :controller => "hiking", :action => "index")
 
+  get("/notebook", :controller => "notebook_entries", :action => "index")
+
+
   get("/admin", { :controller => "admin", :action => "dashboard" })
   get("/admin/new_book", { :controller => "books", :action => "new_book_form" })
     
