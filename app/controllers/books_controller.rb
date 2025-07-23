@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
 
+  before_action :require_admin, except: [:index]
+
   def index
     matching_books = Book.all
 
@@ -61,6 +63,14 @@ class BooksController < ApplicationController
     the_book.destroy
 
     redirect_to("/reading", { :notice => "Book deleted successfully."} )
+  end
+
+  private
+
+  def require_admin
+    unless current_user&.admin?
+      redirect_to root_path, alert: "Access denied."
+    end
   end
 
 end

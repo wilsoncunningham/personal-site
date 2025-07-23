@@ -25,5 +25,7 @@ Rails.application.routes.draw do
   get("/cookie_settings", { :controller => "home", :action => "cookie_settings" })
 
   get "/healthz", to: proc { [200, {}, ["OK"]] }
+
+  get("/bins_and_balls", :controller => "home", :action => "bins_and_balls")
   
 end
