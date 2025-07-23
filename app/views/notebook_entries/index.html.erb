@@ -6,7 +6,7 @@
       <div class="p-4 rounded-xl shadow bg-white border">
         <div class="flex justify-between items-center mb-2">
           <h2 class="text-xl font-semibold"><%= entry.title.presence || "(Untitled)" %></h2>
-          <span class="text-sm text-gray-500"><%= entry.created_at.strftime("%b %d, %Y") %></span>
+          <span class="text-sm text-gray-500"><%= entry.xata_createdat.strftime("%b %d, %Y") %></span>
         </div>
 
         <div class="prose">
