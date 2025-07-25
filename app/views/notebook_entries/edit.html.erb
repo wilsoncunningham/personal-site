@@ -33,3 +33,8 @@
 
   <%= f.submit "Update Entry", class: "btn btn-success" %>
 <% end %>
+
+<%= button_to "Delete Entry", "/notebook/#{@the_notebook_entry.id}", 
+        method: :delete, 
+        data: { confirm: "Are you sure you want to permanently delete this entry?" }, 
+        class: "btn btn-danger" %>

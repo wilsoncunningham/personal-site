@@ -68,12 +68,12 @@ class NotebookEntriesController < ApplicationController
 
 
   def destroy
-    the_id = params.fetch("book_id")
-    the_book = Book.where({ :id => the_id }).at(0)
+    the_id = params.fetch("notebook_entry_id")
+    the_entry = NotebookEntry.where({ :id => the_id }).at(0)
 
-    the_book.destroy
+    the_entry.destroy
 
-    redirect_to("/reading", { :notice => "Book deleted successfully."} )
+    redirect_to("/notebook", { :notice => "Book deleted successfully."} )
   end
 
   private

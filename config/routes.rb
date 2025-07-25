@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get("/notebook/:notebook_entry_id/edit", :controller => "notebook_entries", :action => "edit")
   patch("/notebook/:notebook_entry_id", :controller => "notebook_entries", :action => "update")
   post("/create_notebook_entry", :controller => "notebook_entries", :action => "create")
-  delete("/delete_notebook_entry", :controller => "notebook_entries", :action => "destroy")
+  delete("/notebook/:notebook_entry_id", :controller => "notebook_entries", :action => "destroy")
 
 
   get("/admin", { :controller => "admin", :action => "dashboard" })
