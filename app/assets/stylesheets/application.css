@@ -285,6 +285,11 @@ p, a {
   color: #f6f2e5; 
 }
 
+.navigation-link {
+  color: #999999;
+  font-size: 1em;
+  font-family: "Libre Franklin";
+}
 
 /* .modal-content {
   background-color: transparent !important;
@@ -348,7 +353,7 @@ p, a {
   transition: transform 0.7s ease;
 }
 .notebook-entry-box:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .footer-box {
