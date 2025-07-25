@@ -8,6 +8,12 @@
     This is my digital notebook, a casual space where I make blog posts or simply jot down interesting thoughts, links, or photos. Some entries are quick ideas, while others are more meticulously written. It's a mix of signal and curiosity—part blog, part scratchpad.
   </p>
 
+  <% if current_user && current_user.admin? %>
+    <a href="/notebook/new" class="btn btn-light">
+      New Entry
+    </a>
+  <% end %>
+
   <% if @notebook_entries.any? %>
     <div class="py-5">
       <% @notebook_entries.each do |entry| %>

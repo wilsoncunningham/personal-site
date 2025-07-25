@@ -18,9 +18,9 @@ class NotebookEntriesController < ApplicationController
     render({ :template => "notebook_entries/show" })
   end
 
-  def new_book_form
-    @book = Book.new
-    render(:template => "reading/new")
+  def new_entry_form
+    @entry = NotebookEntry.new
+    render(:template => "notebook/new")
   end
 
   def create

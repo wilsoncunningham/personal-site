@@ -1,5 +1,17 @@
 <div class="container page-content py-5">
 
+  <% if current_user && current_user.admin? %>
+    <a href="/notebook/<%= @the_entry.id %>/edit" class="btn btn-light">
+      Edit
+    </a>
+  <% end %>
+
+  <div>
+    <a href="/notebook" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
+      Back to Notebook
+    </a>
+  </div>
+
   <div class="py-4">
     <h1 class="fire-red">
       <%= @the_entry.title.presence || "(Untitled)" %>
