@@ -42,24 +42,30 @@ class NotebookEntriesController < ApplicationController
     end
   end
 
+  def edit
+    the_id = params.fetch("notebook_entry_id")
+    @the_notebook_entry = NotebookEntry.find(the_id)
+    render template: "notebook_entries/edit"
+  end
+
   def update
-    the_id = params.fetch("book_id")
-    matching_books = Book.where({ id: the_id })
-    @the_book = matching_books.at(0)
+    the_id = params.fetch("notebook_entry_id")
+    @the_notebook_entry = NotebookEntry.find(the_id)
 
-    @the_book.title = params.fetch("book")["title"]
-    @the_book.author = params.fetch("book")["author"]
-    @the_book.notes = params.fetch("book")["notes"]
-    @the_book.rating = params.fetch("book")["rating"]
-    @the_book.start_date = params.fetch("book")["start_date"]
-    @the_book.end_date = params.fetch("book")["end_date"]
+    @the_notebook_entry.title = params.fetch("notebook_entry").fetch("title")
+    @the_notebook_entry.entry_type = params.fetch("notebook_entry").fetch("entry_type")
+    @the_notebook_entry.tags = params.fetch("notebook_entry").fetch("tags")
+    @the_notebook_entry.content = params.fetch("notebook_entry").fetch("content")
+    @the_notebook_entry.is_pinned = params.fetch("notebook_entry").fetch("is_pinned", "0") == "1"
+    @the_notebook_entry.is_public = params.fetch("notebook_entry").fetch("is_public", "0") == "1"
 
-    if @the_book.save
-      redirect_to("/reading", { notice: "Book updated successfully." })
+    if @the_notebook_entry.save
+      redirect_to "/notebook/#{@the_notebook_entry.id}", notice: "Entry updated successfully."
     else
-      render({ template: "reading/show" })
+      render :edit, alert: "Something went wrong."
     end
   end
+
 
   def destroy
     the_id = params.fetch("book_id")

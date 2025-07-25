@@ -1,0 +1,35 @@
+<h1 class="off-white">Edit Notebook Entry</h1>
+
+<%= form_with model: @the_notebook_entry, url: "/notebook/#{@the_notebook_entry.id}", method: :patch, local: true do |f| %>
+  <div class="off-white mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="off-white mb-3">
+    <%= f.label :entry_type %>
+    <%= f.text_field :entry_type, class: "form-control" %>
+  </div>
+
+  <div class="off-white mb-3">
+    <%= f.label :tags %>
+    <%= f.text_field :tags, class: "form-control" %>
+  </div>
+
+  <div class="off-white mb-3">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control", rows: 6 %>
+  </div>
+
+  <div class="off-white form-check mb-3">
+    <%= f.check_box :is_pinned, class: "form-check-input" %>
+    <%= f.label :is_pinned, class: "form-check-label" %>
+  </div>
+
+  <div class="off-white form-check mb-3">
+    <%= f.check_box :is_public, class: "form-check-input" %>
+    <%= f.label :is_public, class: "form-check-label" %>
+  </div>
+
+  <%= f.submit "Update Entry", class: "btn btn-success" %>
+<% end %>
