@@ -3,7 +3,7 @@ class NotebookEntriesController < ApplicationController
   before_action :require_admin, except: []
 
   def index
-    @notebook_entries = NotebookEntry.order(xata_createdat: :desc)
+    @notebook_entries = NotebookEntry.order(created_at: :desc)
 
     render({:template => "notebook_entries/index"})
   end
