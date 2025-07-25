@@ -1,40 +1,55 @@
-<h1 class="off-white">Edit Notebook Entry</h1>
+<div class="container page-content py-5">
 
-<%= form_with model: @the_notebook_entry, url: "/notebook/#{@the_notebook_entry.id}", method: :patch, local: true do |f| %>
-  <div class="off-white mb-3">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form-control" %>
+  <div>
+    <a href="/notebook" class="navigation-link link-offset-1 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
+      ← Back to notebook
+    </a>
+  </div>
+  <div>
+    <a href="/notebook/<%= @the_notebook_entry.id %>" class="navigation-link link-offset-1 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
+      ← Back to entry
+    </a>
   </div>
 
-  <div class="off-white mb-3">
-    <%= f.label :entry_type %>
-    <%= f.text_field :entry_type, class: "form-control" %>
-  </div>
+  <h1 class="off-white">Edit Notebook Entry</h1>
 
-  <div class="off-white mb-3">
-    <%= f.label :tags %>
-    <%= f.text_field :tags, class: "form-control" %>
-  </div>
+  <%= form_with model: @the_notebook_entry, url: "/notebook/#{@the_notebook_entry.id}", method: :patch, local: true do |f| %>
+    <div class="off-white mb-3">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
 
-  <div class="off-white mb-3">
-    <%= f.label :content %>
-    <%= f.text_area :content, class: "form-control", rows: 6 %>
-  </div>
+    <div class="off-white mb-3">
+      <%= f.label :entry_type %>
+      <%= f.text_field :entry_type, class: "form-control" %>
+    </div>
 
-  <div class="off-white form-check mb-3">
-    <%= f.check_box :is_pinned, class: "form-check-input" %>
-    <%= f.label :is_pinned, class: "form-check-label" %>
-  </div>
+    <div class="off-white mb-3">
+      <%= f.label :tags %>
+      <%= f.text_field :tags, class: "form-control" %>
+    </div>
 
-  <div class="off-white form-check mb-3">
-    <%= f.check_box :is_public, class: "form-check-input" %>
-    <%= f.label :is_public, class: "form-check-label" %>
-  </div>
+    <div class="off-white mb-3">
+      <%= f.label :content %>
+      <%= f.text_area :content, class: "form-control", rows: 6 %>
+    </div>
 
-  <%= f.submit "Update Entry", class: "btn btn-success" %>
-<% end %>
+    <div class="off-white form-check mb-3">
+      <%= f.check_box :is_pinned, class: "form-check-input" %>
+      <%= f.label :is_pinned, class: "form-check-label" %>
+    </div>
 
-<%= button_to "Delete Entry", "/notebook/#{@the_notebook_entry.id}", 
-        method: :delete, 
-        data: { confirm: "Are you sure you want to permanently delete this entry?" }, 
-        class: "btn btn-danger" %>
+    <div class="off-white form-check mb-3">
+      <%= f.check_box :is_public, class: "form-check-input" %>
+      <%= f.label :is_public, class: "form-check-label" %>
+    </div>
+
+    <%= f.submit "Update Entry", class: "btn btn-success" %>
+  <% end %>
+
+  <%= button_to "Delete Entry", "/notebook/#{@the_notebook_entry.id}", 
+          method: :delete, 
+          data: { confirm: "Are you sure you want to permanently delete this entry?" }, 
+          class: "btn btn-danger" %>
+
+</div>
