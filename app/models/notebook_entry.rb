@@ -6,10 +6,10 @@
 #  content    :text
 #  entry_type :string
 #  image_url  :string
-#  is_pinned  :boolean          default(FALSE)
-#  is_public  :boolean          default(TRUE)
+#  is_pinned  :boolean
+#  is_public  :boolean
 #  link_url   :string
-#  tags       :string           default([]), is an Array
+#  tags       :string
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

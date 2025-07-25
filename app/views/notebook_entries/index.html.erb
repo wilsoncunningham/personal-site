@@ -17,45 +17,47 @@
   <% if @notebook_entries.any? %>
     <div class="py-5">
       <% @notebook_entries.each do |entry| %>
-        <%= link_to "/notebook/#{entry.id}", class: "text-decoration-none text-reset" do %>
-          <div class="notebook-entry-box p-4 mb-2 shadow">
-            <div class="d-flex justify-content-between align-items-start mb-1">
-              
-              <div>
+        <% if entry.is_public %>
+          <%= link_to "/notebook/#{entry.id}", class: "text-decoration-none text-reset" do %>
+            <div class="notebook-entry-box p-4 mb-2 shadow">
+              <div class="d-flex justify-content-between align-items-start mb-1">
                 
-                <div class="d-flex justify-content-start align-items-center">
-                  <h2 class="mb-1 fire-red">
-                    <%= entry.title.presence || "(Untitled)" %>
-                  </h2>
-
-                  <% if entry.entry_type.present? %>
-                    <span class="notebook-badge mx-3"><%= entry.entry_type.capitalize %></span>
-                  <% end %>
+                <div>
                   
-                  <% if entry.is_pinned? %>
-                    <div class="pe-2" title="Pinned">📌</div>
-                  <% end %>
-                </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <h2 class="mb-1 fire-red">
+                      <%= entry.title.presence || "(Untitled)" %>
+                    </h2>
 
-
-                <% if entry.tags.present? %>
-                  <div class="mb-1">
-                    <% entry.tags.each do |tag| %>
-                      <span class="notebook-tag">#<%= tag %></span>
+                    <% if entry.entry_type.present? %>
+                      <span class="notebook-badge mx-3"><%= entry.entry_type.capitalize %></span>
+                    <% end %>
+                    
+                    <% if entry.is_pinned? %>
+                      <div class="pe-2" title="Pinned">📌</div>
                     <% end %>
                   </div>
-                <% end %>
-              </div>
 
-              <div class="text-end">
-                <div>
-                  <span class="text-sm notebook-tag"><%= entry.created_at.strftime("%b %d, %Y") %></span>
+
+                  <% if entry.tags.present? %>
+                    <div class="mb-1">
+                      <% entry.tags.split(',').each do |tag| %>
+                        <span class="notebook-tag">#<%= tag.strip %></span>
+                      <% end %>
+                    </div>
+                  <% end %>
                 </div>
-              </div>
-              
-            </div>
 
-          </div>
+                <div class="text-end">
+                  <div>
+                    <span class="text-sm notebook-tag"><%= entry.created_at.strftime("%b %d, %Y") %></span>
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+          <% end %>
         <% end %>
       <% end %>
     </div>

@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_07_23_043826) do
     t.string "entry_type"
     t.string "link_url"
     t.string "image_url"
-    t.string "tags", default: [], array: true
+    t.string "tags"
     t.boolean "is_pinned", default: false
     t.boolean "is_public", default: true
     t.datetime "created_at", null: false
