@@ -20,23 +20,25 @@ class NotebookEntriesController < ApplicationController
 
   def new_entry_form
     @entry = NotebookEntry.new
-    render(:template => "notebook/new")
+    render(:template => "notebook_entries/new")
   end
 
   def create
-    the_book = Book.new
-    the_book.title = params.fetch("query_title")
-    the_book.author = params.fetch("query_author")
-    the_book.rating = params.fetch("query_rating")
-    the_book.notes = params.fetch("query_notes")
-    the_book.start_date = params.fetch("query_start_date")
-    the_book.end_date = params.fetch("query_end_date")
+    entry = NotebookEntry.new
+    entry.title = params.fetch("query_title")
+    entry.entry_type = params.fetch("query_entry_type")
+    entry.content = params.fetch("query_content")
+    entry.link_url = params.fetch("query_link_url")
+    entry.image_url = params.fetch("query_image_url")
+    entry.tags = params.fetch("query_tags")
+    entry.is_public = params.fetch("query_is_public")
+    entry.is_pinned = params.fetch("query_is_pinned")
 
-    if the_book.valid?
-      the_book.save
-      redirect_to("/reading", { :notice => "Book created successfully." })
+    if entry.valid?
+      entry.save
+      redirect_to("/notebook", { :notice => "Notebook Entry created successfully." })
     else
-      redirect_to("/reading", { :alert => the_book.errors.full_messages.to_sentence })
+      redirect_to("/notebook", { :alert => entry.errors.full_messages.to_sentence })
     end
   end
 

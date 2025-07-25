@@ -1,37 +1,47 @@
-<div class="container">
-  <h1 class="off-white">Add a new Notebook Entry</h1>
+<div class="container off-white page-content py-5">
+  <h1 class="fire-red mb-4">New Notebook Entry</h1>
 
-  <%= form_tag("/reading", method: "post", class: "mb-5, off-white") do %>
+  <%= form_with model: @notebook_entry, url: "/create_notebook_entry", local: true do |f| %>
     <div class="mb-3">
-      <%= label_tag(:query_title, "Title", class: "form-label") %>
-      <%= text_field_tag(:query_title, nil, class: "form-control") %>
+      <%= f.label :query_title, "Title", class: "form-label" %>
+      <%= f.text_field :query_title, class: "form-control" %>
     </div>
 
     <div class="mb-3">
-      <%= label_tag(:query_author, "Author", class: "form-label") %>
-      <%= text_field_tag(:query_author, nil, class: "form-control") %>
+      <%= f.label :query_entry_type, "Entry Type", class: "form-label" %>
+      <%= f.text_field :query_entry_type, class: "form-control" %>
     </div>
 
     <div class="mb-3">
-      <%= label_tag(:query_rating, "Rating", class: "form-label") %>
-      <%= number_field_tag(:query_rating, nil, step: 0.5, class: "form-control") %>
+      <%= f.label :query_content, "Content", class: "form-label" %>
+      <%= f.text_area :query_content, rows: 6, class: "form-control" %>
     </div>
 
     <div class="mb-3">
-      <%= label_tag(:query_start_date, "Start Date", class: "form-label") %>
-      <%= date_field_tag(:query_start_date, nil, class: "form-control") %>
+      <%= f.label :query_link_url, "Link (optional)", class: "form-label" %>
+      <%= f.url_field :query_link_url, class: "form-control" %>
     </div>
 
     <div class="mb-3">
-      <%= label_tag(:query_end_date, "End Date", class: "form-label") %>
-      <%= date_field_tag(:query_end_date, nil, class: "form-control") %>
+      <%= f.label :query_image_url, "Image URL (optional)", class: "form-label" %>
+      <%= f.url_field :query_image_url, class: "form-control" %>
     </div>
 
     <div class="mb-3">
-      <%= label_tag(:query_notes, "Notes", class: "form-label") %>
-      <%= text_area_tag(:query_notes, nil, rows: 20, class: "form-control") %>
+      <%= f.label :query_tags, "Tags (comma-separated)", class: "form-label" %>
+      <%= f.text_field :query_tags, class: "form-control", placeholder: "e.g. philosophy, design, links" %>
     </div>
 
-    <%= submit_tag("Add Book", class: "btn btn-light") %>
+    <div class="form-check mb-2">
+      <%= f.check_box :query_is_public, class: "form-check-input" %>
+      <%= f.label :query_is_public, "Public?", class: "form-check-label" %>
+    </div>
+
+    <div class="form-check mb-4">
+      <%= f.check_box :query_is_pinned, class: "form-check-input" %>
+      <%= f.label :query_is_pinned, "Pin this entry?", class: "form-check-label" %>
+    </div>
+
+    <%= f.submit "Create Entry", class: "btn btn-primary" %>
   <% end %>
 </div>
