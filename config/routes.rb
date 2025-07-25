@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get("/hiking", :controller => "hiking", :action => "index")
 
   get("/notebook", :controller => "notebook_entries", :action => "index")
+  get("/notebook/:notebook_entry_id", :controller => "notebook_entries", :action => "show")
 
 
   get("/admin", { :controller => "admin", :action => "dashboard" })

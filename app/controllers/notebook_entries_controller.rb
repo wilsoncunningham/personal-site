@@ -9,13 +9,13 @@ class NotebookEntriesController < ApplicationController
   end
 
   def show
-    the_id = params.fetch("book_id")
+    the_id = params.fetch("notebook_entry_id")
 
-    matching_books = Book.where({ :id => the_id })
+    matching_notebook_entries = NotebookEntry.where({ :id => the_id })
 
-    @the_book = matching_books.at(0)
+    @the_entry = matching_notebook_entries.at(0)
 
-    render({ :template => "reading/show" })
+    render({ :template => "notebook_entries/show" })
   end
 
   def new_book_form
