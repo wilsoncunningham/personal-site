@@ -350,10 +350,26 @@ p, a {
   background-color: #2b3035;
   border-top: 0px solid #f6f2e5;
   border-bottom: 1px solid #f6f2e5;
-  transition: transform 0.7s ease;
+  transition: transform 0.6s ease;
 }
 .notebook-entry-box:hover {
-  transform: scale(1.01);
+  transform: scale(1.015);
+}
+
+.notebook-tag {
+  color: #999999;
+  font-size: 0.8em;
+  font-family: "Libre Franklin";
+}
+
+.notebook-badge {
+  font-family: "Libre Franklin";
+  font-size: 0.7em;
+  background-color: #3b4046;
+  color: #999999;
+  padding: 0.2em 0.4em;
+  text-align: center;
+  border-radius: 5px;
 }
 
 .footer-box {
