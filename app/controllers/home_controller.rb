@@ -22,7 +22,6 @@ class HomeController < ApplicationController
     render({:template => "bins_and_balls"})
   end
 
-
   private
 
   def require_admin

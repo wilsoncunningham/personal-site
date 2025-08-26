@@ -37,6 +37,9 @@ Rails.application.routes.draw do
 
   get("/bins_and_balls", :controller => "home", :action => "bins_and_balls")
 
+  get("/password", :controller => "passwords", :action => "index")
+  post("/generate_password", {:controller => "passwords", :action => "generate_password"})
+
   get("/rake_tasks", { :controller => "rake_tasks", :action => "show" })
   get("/run_task", { :controller => "rake_tasks", :action => "run_task" })
 
