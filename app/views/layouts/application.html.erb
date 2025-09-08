@@ -138,12 +138,11 @@
         const root  = document.documentElement;
         const btn   = document.getElementById('theme-toggle');
         const icon  = document.getElementById('theme-icon');
-        const mql   = window.matchMedia('(prefers-color-scheme: dark)');
 
         function setTheme(mode) {
           localStorage.setItem('theme', mode);
           root.setAttribute('data-theme', mode);
-          root.setAttribute('data-bs-theme', mode); // Bootstrap 5.3
+          root.setAttribute('data-bs-theme', mode);
 
           if (mode === 'dark') {
             icon.classList.remove('fa-moon');
@@ -155,12 +154,7 @@
         }
 
         // Initialize on load
-        const stored = localStorage.getItem('theme');
-        if (stored) {
-          setTheme(stored);
-        } else {
-          setTheme(mql.matches ? 'dark' : 'light'); // or force 'dark' if you want
-        }
+        setTheme(localStorage.getItem('theme') || 'dark');
 
         // Toggle on click
         btn.addEventListener('click', () => {

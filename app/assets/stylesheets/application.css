@@ -53,7 +53,7 @@ p, a {
 }
 
 .theme-icon {
-    color: e21a41
+    color: var(--theme-icon-color)
 }
 
 .garamond {
@@ -410,6 +410,7 @@ p, a {
   --heading: #ff6b87;
   --muted: #9aa4b2;
 
+  --theme-icon-color: #fde31e;
   --off-white: #f6f2e5;
   --fire-red: #ff6b87;
   --ice-blue: #64ffda;
@@ -425,6 +426,7 @@ html[data-theme="light"] {
   --heading: #e21a41;
   --muted: #666666;
 
+  --theme-icon-color: rgb(121, 167, 218);
   --off-white: #f6f2e5;
   --fire-red: #e21a41;
   --ice-blue: #64ffda;
