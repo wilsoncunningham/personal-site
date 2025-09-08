@@ -47,9 +47,13 @@ h1, h2, h3 {
 
 p, a {
   font-family: "Lora", serif;
-  color: #f6f2e5;
+  color: var(--text);
   font-size: 1.2rem;
   line-height: 1.6;
+}
+
+.theme-icon {
+    color: e21a41
 }
 
 .garamond {
@@ -82,8 +86,8 @@ p, a {
 .dark-grey {
   color: #161618;
 }
-.bg-dark-grey {
-  background-color: #161618
+.bg-standard {
+  background-color: var(--background)
 }
 
 .off-white {
@@ -396,3 +400,36 @@ p, a {
   max-width: none;
   padding: 2rem;
 } */
+
+/* TESTING COLOR THEMES BELOW */
+
+/* Dark theme (default) */
+:root {
+  --background: #161618;
+  --text: #f6f2e5;
+  --heading: #ff6b87;
+  --muted: #9aa4b2;
+
+  --off-white: #f6f2e5;
+  --fire-red: #ff6b87;
+  --ice-blue: #64ffda;
+  --warm-gold: #ffcc66;
+  --lime: #a8ff60;
+  --sage: #99c794;
+}
+
+/* Light theme */
+html[data-theme="light"] {
+  --background: #f3f2ee;
+  --text: #111111;
+  --heading: #e21a41;
+  --muted: #666666;
+
+  --off-white: #f6f2e5;
+  --fire-red: #e21a41;
+  --ice-blue: #64ffda;
+  --warm-gold: #ffcc66;
+  --lime: #a8ff60;
+  --sage: #99c794;
+}
+
