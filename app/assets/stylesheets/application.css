@@ -79,9 +79,6 @@ p, a {
 .fire-red {
   color: #e21a41;
 }
-.bg-fire-red {
-  background-color: #e21a41 
-}
 
 .dark-grey {
   color: #161618;
@@ -93,36 +90,9 @@ p, a {
 .off-white {
   color: #f6f2e5
 }
-.bg-off-white {
-  background-color: #f6f2e5
-}
-
-.ice-blue {
-  color: #64ffda
-}
-.bg-ice-blue {
-  background-color: #64ffda
-}
-
-.warm-gold {
-  color: #ffcc66
-}
-.bg-warm-gold {
-  background-color: #ffcc66
-}
-
-.lime {
-  color: #a8ff60
-}
-.bg-lime {
-  background-color: #a8ff60
-}
 
 .sage {
   color: #99c794
-}
-.bg-sage {
-  background-color: #99c794
 }
 
 .vpadding-thick {
