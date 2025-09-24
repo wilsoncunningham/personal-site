@@ -365,6 +365,34 @@ p, a {
     color: #3399FF
 }
 
+.pagination-button {
+  background-color: var(--text);
+  color: var(--background);
+  font-family: "Libre Franklin"
+}
+
+
+/* Pagination link styles */
+.pagination a {
+  color: var(--background);
+  background-color: var(--text);
+  font-family: 'Libre Franklin';
+}
+
+/* Active page */
+.pagination .active a {
+  background-color: var(--fire-red);
+  border-color: var(--fire-red);
+  color: #f6f2e5;
+}
+
+/* Hover state */
+.pagination a:hover {
+  background-color: var(--fire-red);
+  border-color: var(--fire-red);
+  color: #f6f2e5;
+}
+
 /* You can also reset or override Bootstrap classes, for example: */
 /* .container {
   max-width: none;
@@ -377,12 +405,12 @@ p, a {
 :root {
   --background: #161618;
   --text: #f6f2e5;
-  --heading: #ff6b87;
+  --heading: #e21a41;
   --muted: #9aa4b2;
 
   --theme-icon-color: #fde31e;
   --off-white: #f6f2e5;
-  --fire-red: #ff6b87;
+  --fire-red: #e21a41;
   --ice-blue: #64ffda;
   --warm-gold: #ffcc66;
   --lime: #a8ff60;
@@ -404,4 +432,3 @@ html[data-theme="light"] {
   --lime: #a8ff60;
   --sage: #99c794;
 }
-

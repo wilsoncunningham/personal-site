@@ -218,6 +218,9 @@ GEM
     kaminari-activerecord (1.2.2)
       activerecord
       kaminari-core (= 1.2.2)
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
     kaminari-core (1.2.2)
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
@@ -482,6 +485,8 @@ DEPENDENCIES
   http
   importmap-rails
   jbuilder
+  kaminari
+  kaminari-bootstrap
   openai-chat
   pg (~> 1.1)
   pry-rails

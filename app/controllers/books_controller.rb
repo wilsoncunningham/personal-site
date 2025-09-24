@@ -2,11 +2,20 @@ class BooksController < ApplicationController
 
   before_action :require_admin, except: [:index]
 
+  # def index
+  #   matching_books = Book.all
+
+  #   @list_of_books = matching_books.order({ :end_date => :desc })
+
+  #   render({:template => "reading/index"})
+  # end
+
   def index
-    matching_books = Book.all
-
-    @list_of_books = matching_books.order({ :end_date => :desc })
-
+    if params[:see_all] == "true"
+      @list_of_books = Book.order(end_date: :desc)   # no pagination
+    else
+      @list_of_books = Book.order(end_date: :desc).page(params[:page]).per(4)
+    end
     render({:template => "reading/index"})
   end
 
