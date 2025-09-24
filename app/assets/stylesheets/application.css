@@ -375,7 +375,7 @@ p, a {
 /* Pagination link styles */
 .pagination a {
   color: var(--background);
-  background-color: var(--muted);
+  background-color: var(--text);
   font-family: 'Libre Franklin';
 }
 
@@ -394,7 +394,8 @@ p, a {
 }
 
 .page-item.disabled .page-link {
-  background: var(--muted-alt)
+  background: var(--muted-text);
+  color: var(--background)
 }
 
 /* You can also reset or override Bootstrap classes, for example: */
@@ -411,7 +412,7 @@ p, a {
   --text: #f6f2e5;
   --heading: #e21a41;
   --muted: #b1b3b5;
-  --muted-alt: #7a7a7a;
+  --muted-text: #acacac;
 
   --theme-icon-color: #fde31e;
   --off-white: #f6f2e5;
@@ -428,7 +429,7 @@ html[data-theme="light"] {
   --text: #111111;
   --heading: #e21a41;
   --muted: #909090;
-  --muted-alt: #c8c8c8;
+  --muted-text: #838383;
 
   --theme-icon-color: rgb(121, 167, 218);
   --off-white: #f6f2e5;

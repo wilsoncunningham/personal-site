@@ -88,13 +88,7 @@
     </table>
 
     <div class="my-4 mx-3 d-flex justify-content-center">
-      <%= paginate @list_of_books,
-            window: 1,
-            first_label: '«',
-            prev_label: '‹ Back',
-            next_label: 'Next ›',
-            last_label: '»'
-            %>
+      <%= paginate @list_of_books, window: 1 %>
     </div>
 
   </div>
