@@ -92,7 +92,7 @@ p, a {
 }
 
 .sage {
-  color: #99c794
+  color: var(--sage);
 }
 
 .vpadding-thick {
@@ -416,32 +416,9 @@ p, a {
 
 /* TESTING COLOR THEMES BELOW */
 
-/* Dark theme (default) */
+
+/* Light theme (default) */
 :root {
-  --background: #161618;
-  --text: #f6f2e5;
-  --heading: #e21a41;
-  --muted: #595b5e;
-  --muted-text: #acacac;
-
-  --tab-bg: #212529;
-  --tab-striped-bg: #2c3034;
-  --tab-striped-color: #f8f9fa;
-  --tab-hover-bg: #3c3e41;    /* hover effect */
-  --tab-color: #f8f9fa;       /* text color */
-  --tab-border-color: #2c3034;   /* border */
-
-  --theme-icon-color: #fde31e;
-  --off-white: #f6f2e5;
-  --fire-red: #e21a41;
-  --ice-blue: #64ffda;
-  --warm-gold: #ffcc66;
-  --lime: #a8ff60;
-  --sage: #99c794;
-}
-
-/* Light theme */
-html[data-theme="light"] {
   --background: #f3f2ee;
   --text: #111111;
   --heading: #e21a41;
@@ -457,6 +434,30 @@ html[data-theme="light"] {
   --tab-border-color: #e0e0e0;
 
   --theme-icon-color: rgb(121, 167, 218);
+  --off-white: #f6f2e5;
+  --fire-red: #e21a41;
+  --ice-blue: #64ffda;
+  --warm-gold: #ffcc66;
+  --lime: #a8ff60;
+  --sage: #5caf52;
+}
+
+/* Dark theme */
+html[data-theme="dark"] {
+  --background: #161618;
+  --text: #f6f2e5;
+  --heading: #e21a41;
+  --muted: #595b5e;
+  --muted-text: #acacac;
+
+  --tab-bg: #212529;
+  --tab-striped-bg: #2c3034;
+  --tab-striped-color: #f8f9fa;
+  --tab-hover-bg: #3c3e41;    /* hover effect */
+  --tab-color: #f8f9fa;       /* text color */
+  --tab-border-color: #2c3034;   /* border */
+
+  --theme-icon-color: #fde31e;
   --off-white: #f6f2e5;
   --fire-red: #e21a41;
   --ice-blue: #64ffda;

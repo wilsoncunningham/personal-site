@@ -162,7 +162,7 @@
       (() => {
         const root = document.documentElement;
 
-        const getStoredTheme = () => localStorage.getItem('theme') || 'dark'; // default = dark
+        const getStoredTheme = () => localStorage.getItem('theme') || 'light'; // default = light
 
         const setTheme = (theme) => {
           root.setAttribute('data-theme', theme);
@@ -181,7 +181,7 @@
           const icon = document.querySelector('.theme-icon-active');
           if (icon) {
             icon.className = 'bi theme-icon-active fs-5 ' + 
-              (theme === 'dark' ? 'bi-moon-stars-fill' : 'bi-sun-fill');
+              (theme === 'light' ? 'bi-moon-stars-fill' : 'bi-sun-fill');
           }
 
           const toggleBtn = document.getElementById('themeMenu');

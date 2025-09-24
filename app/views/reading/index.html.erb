@@ -88,7 +88,9 @@
     </table>
 
     <div class="my-4 mx-3 d-flex justify-content-center">
-      <%= paginate @list_of_books, window: 1 %>
+      <%= paginate @list_of_books,
+            window: 1,
+            params_on_first_page: true %>
     </div>
 
   </div>
