@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     if params[:see_all] == "true"
       @list_of_books = Book.order(end_date: :desc)   # no pagination
     else
-      @list_of_books = Book.order(end_date: :desc).page(params[:page]).per(4)
+      @list_of_books = Book.order(end_date: :desc).page(params[:page]).per(2)
     end
     render({:template => "reading/index"})
   end
