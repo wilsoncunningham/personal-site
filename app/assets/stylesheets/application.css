@@ -454,6 +454,7 @@ html[data-theme="dark"] {
   --tab-striped-bg: #2c3034;
   --tab-striped-color: #f8f9fa;
   --tab-hover-bg: #3c3e41;    /* hover effect */
+  --tab-hover-color: #f8f9fa;
   --tab-color: #f8f9fa;       /* text color */
   --tab-border-color: #2c3034;   /* border */
 
