@@ -265,6 +265,10 @@ p, a {
   font-family: "Libre Franklin";
 }
 
+.nav-link:hover {
+  color: var(--fire-red);
+}
+
 /* .modal-content {
   background-color: transparent !important;
   border: none;
@@ -273,8 +277,13 @@ p, a {
 } */
 
 .reading-log-table {
-  width: 70%;           /* narrower than container */
-  margin: 0 auto;       /* center horizontally */
+  --bs-table-bg: var(--tab-bg);          /* base row background */
+  --bs-table-striped-bg: var(--tab-striped-bg);  /* striped rows */
+  --bs-table-striped-color: var(--tab-striped-color);  /* text on striped */
+  --bs-table-hover-bg: var(--tab-hover-bg);    /* hover effect */
+  --bs-table-hover-color: var(--tab-hover-color);
+  --bs-table-color: var(--tab-color);       /* text color */
+  --bs-table-border-color: var(--tab-border-color);   /* border */
 }
 
 
@@ -306,7 +315,7 @@ p, a {
 
 .table p, 
 .table a{
-  color: white;
+  color: var(--text);
   font-family: "Libre Franklin";
   text-align: left;
   text-indent: 2em;
@@ -368,15 +377,16 @@ p, a {
 .pagination-button {
   background-color: var(--text);
   color: var(--background);
-  font-family: "Libre Franklin"
+  font-family: "Libre Franklin";
 }
 
 
 /* Pagination link styles */
 .pagination a {
-  color: var(--background);
-  background-color: var(--text);
+  color: var(--text);
+  background-color: var(--tab-bg);
   font-family: 'Libre Franklin';
+  font-weight: 600;
 }
 
 /* Active page */
@@ -394,8 +404,8 @@ p, a {
 }
 
 .page-item.disabled .page-link {
-  background: var(--muted-text);
-  color: var(--background)
+  background: var(--tab-striped-bg);
+  color: var(--text)
 }
 
 /* You can also reset or override Bootstrap classes, for example: */
@@ -411,8 +421,15 @@ p, a {
   --background: #161618;
   --text: #f6f2e5;
   --heading: #e21a41;
-  --muted: #b1b3b5;
+  --muted: #595b5e;
   --muted-text: #acacac;
+
+  --tab-bg: #212529;
+  --tab-striped-bg: #2c3034;
+  --tab-striped-color: #f8f9fa;
+  --tab-hover-bg: #3c3e41;    /* hover effect */
+  --tab-color: #f8f9fa;       /* text color */
+  --tab-border-color: #2c3034;   /* border */
 
   --theme-icon-color: #fde31e;
   --off-white: #f6f2e5;
@@ -430,6 +447,14 @@ html[data-theme="light"] {
   --heading: #e21a41;
   --muted: #909090;
   --muted-text: #838383;
+
+  --tab-bg: #d6d6d6;
+  --tab-striped-bg: #e0e0e0;
+  --tab-striped-color: #111111;
+  --tab-hover-bg: #c2c2c0;
+  --tab-hover-color: #111111;
+  --tab-color: #111111;
+  --tab-border-color: #e0e0e0;
 
   --theme-icon-color: rgb(121, 167, 218);
   --off-white: #f6f2e5;
