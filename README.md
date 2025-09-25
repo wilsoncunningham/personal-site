@@ -1,3 +1,59 @@
+# Wilson Cunningham — Personal Website
+
+This repository contains the source code for my personal website: [wilsoncunningham.com](https://wilsoncunningham.com).  
+The site serves as a portfolio of my technical projects, reading log, and interactive features I’ve built while learning web development.  
+
+---
+
+## Features
+
+- **Landing Page** – central hub with navigation to reading log, portfolio, and other sections.  
+- **Reading Log** – dynamic book database with pagination, Bootstrap styling, and dark/light theme toggle.  
+- **Interactive Components** – tables, pagination controls, Bootstrap icons, and theme customization.  
+
+---
+
+## Tech Stack
+
+- **Framework:** Ruby on Rails  
+- **Frontend:** HTML, CSS, Bootstrap 5  
+- **Database:** PostgreSQL  
+- **Version Control:** Git & GitHub  
+- **Hosting/Domain:** Deployed at [wilsoncunningham.com](https://wilsoncunningham.com)  
+
+---
+
+## Project Structure
+
+- `app/controllers/` – Rails controllers for reading log and other pages.  
+- `app/views/` – HTML/ERB templates.  
+- `app/assets/stylesheets/` – custom CSS and Bootstrap overrides.  
+- `db/migrate/` – database schema migrations.  
+
+---
+
+## Roadmap
+
+- Expand reading log with filters, search, and stats.  
+- Improve mobile responsiveness.  
+- Add blog functionality for posts on coding, finance, and baseball.  
+
+---
+
+## Contact
+
+Created and maintained by **Wilson Cunningham**.  
+- Website: [wilsoncunningham.com](https://wilsoncunningham.com)  
+- LinkedIn: [linkedin.com/in/wilsoncunningham](https://linkedin.com/in/wilsoncunningham)  
+
+
+
+
+
+---------------------------------------------
+
+
+
 # Rails Template
 
 This is a base Ruby on Rails repository configured for learning with Codespaces (and Gitpod).
