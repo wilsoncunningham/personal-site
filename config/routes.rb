@@ -16,7 +16,11 @@ Rails.application.routes.draw do
 
   get("/career", :controller => "home", :action => "career")
 
-  get("/hiking", :controller => "hiking", :action => "index")
+  get("/hiking", :controller => "hiking", :action => "home")
+  get("/hiking/favorites", :controller => "hiking", :action => "favorites")
+
+  get("/hiking/gallery", :controller => "hiking_photos", :action => "index")
+  get("/hiking/gallery/:hiking_photo_id", :controller => "hiking_photos", :action => "show")
 
   get("/notebook", :controller => "notebook_entries", :action => "index")
   get("/notebook/new", { :controller => "notebook_entries", :action => "new_entry_form" })

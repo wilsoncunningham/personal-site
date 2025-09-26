@@ -1,0 +1,67 @@
+<div class="container page-content py-5">
+
+  <div class="vpadding-thick">
+    <%= image_tag "hiking/joshua-tree-banner.jpg", alt: "Panoramic view of Joshua Tree National Park at sunset with dramatic orange clouds, rock formations, and desert vegetation", class: "hiking-banner" %>
+    <p class="caption text-end w-100">Joshua Tree National Park, California</p>
+  </div>
+
+  <div class="pt-5">
+    <h1 class="sage"><em>My Favorite Hikes</em></h1>
+  </div>
+
+  <div class="py-4">
+    <p>
+      I have always been passionate about spending time in nature, and hiking has been my favorite way to experience its beauty. It wakes up my senses, grounds me, and instills in me a deep appreciation for silence—something that is sorerly underrated in our society. As I do with most things I enjoy, I set goals for myself in this hobby. Although I have my hiking ambitions, I try to remain cognizant that this is about the journey, not the destination.
+    </p>
+  </div>
+
+  <div class="row vpadding-thin text-start">
+    <div class="col">
+      <h3 class="sage"><em>AllTrails</em></h3>
+    </div>
+    <div class="col-9">
+      <p>
+        I've logged the bulk of my outdoor adventures on <a class="external-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://www.alltrails.com/members/wilson-cunningham" target="_blank">AllTrails</a>. 
+        To see what I've been up to on the trails, check out my 
+        <a class="external-link link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://www.alltrails.com/members/wilson-cunningham" target="_blank">profile</a>. 
+        Also, I am <em>always</em> looking for new trails and camping spots. If you have any recommendations, please reach out!
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="sage pt-4 pb-2">
+      <em>Gallery</em>
+    </h3>
+  </div>
+
+  <div class="container p-0">
+    <div class="row justify-content-between">
+      <% images = [
+        { src: "hiking/duck-pass-grass.jpg", caption: "Duck Pass, Mammoth Lakes, California", alt: "Close-up of tall green grass with an alpine lake and rugged mountains blurred in the background at Duck Pass, California" },
+        { src: "hiking/humphreys.jpg", caption: "Humphreys Peak, Flagstaff, Arizona", alt: "Hiker standing on snowy summit with surrounding peaks and expansive sky at Humphreys Peak, Arizona" },
+        { src: "hiking/bright-angel.jpg", caption: "Bright Angel Trail, Grand Canyon, Arizona", alt: "Hiker standing on sunlit trail with dramatic canyon cliffs and bright blue sky on Bright Angel Trail, Grand Canyon" },
+        { src: "hiking/toms-thumb.jpg", caption: "Tom's Thumb, Scottsdale, Arizona", alt: "Hiker standing on sandy trail in front of large granite spire under dramatic clouds at Tom’s Thumb, Arizona" },
+        { src: "hiking/see-canyon.jpg", caption: "See Canyon, Payson, Arizona", alt: "Narrow forest trail surrounded by lush green trees and grassy ground at See Canyon, Payson, Arizona" },
+        { src: "hiking/joshua-tree-sunset.jpg", caption: "Joshua Tree National Park, California", alt: "Colorful sunset sky with dramatic orange and pink clouds above silhouetted Joshua trees and desert landscape" },
+        { src: "hiking/horton-creek.jpg", caption: "Horton Creek, Payson, Arizona", alt: "Person walking on a pine forest trail surrounded by tall trees at Horton Creek in Payson, Arizona" },
+        { src: "hiking/conness-lake.jpg", caption: "Conness Lakes, Mono County, California", alt: "Mountain landscape with a rocky alpine trail leading to clear blue Conness Lake under a partly cloudy sky" },
+        { src: "hiking/flatiron-2.jpg", caption: "Flatiron, Superstition Mountains, Arizona", alt: "Hiker standing on a rocky ledge with expansive desert and mountain views from Flatiron in Arizona" },
+        { src: "hiking/sedona-red.jpg", caption: "Sedona, Arizona", alt: "Red rock formations glowing at sunset under dramatic clouds in Sedona, Arizona" },
+        { src: "hiking/oak-creek.jpg", caption: "Oak Creek, Sedona, Arizona", alt: "Narrow canyon with steep rock walls and trees above a wet, rocky creek bed at Oak Creek in Sedona, Arizona" },
+        { src: "hiking/flatiron-1.jpg", caption: "Superstition Peak 5024, Arizona", alt: "Hiker standing on summit with wide desert landscape and mountain ridges in the distance at Flatiron, Arizona" }
+        ]
+      %>
+
+
+      <% images.each do |img| %>
+        <div class="col-auto">
+          <%= image_tag img[:src], alt: img[:alt],
+            class: "gallery-alt", loading: "lazy", data: { bs_toggle: "modal", bs_target: "#galleryModal" } %>
+          <p class="caption text-end w-100"><%= img[:caption] %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

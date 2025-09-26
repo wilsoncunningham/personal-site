@@ -1,5 +1,5 @@
 class HikingController < ApplicationController
-  def index
+  def home
     @gallery_images = [
       { file: "duck-pass-grass.jpg", caption: "Duck Pass, Mammoth Lakes, California" },
       { file: "humphreys.jpg", caption: "Humphreys Peak, Flagstaff, Arizona"},
@@ -15,6 +15,11 @@ class HikingController < ApplicationController
       { file: "flatiron-1.jpg", caption: "Flatiron, Superstition Mountains, Arizona"},
     ]
 
-    render({:template => "hiking"})
+    render({:template => "hiking/home"})
   end
+
+  def favorites
+    render({:template => "hiking/favorites"})
+  end
+
 end
