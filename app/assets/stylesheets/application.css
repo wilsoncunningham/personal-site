@@ -45,6 +45,11 @@ h1, h2, h3 {
   color: #e21a41;
 }
 
+h4, h5 {
+  font-family: "EB Garamond", serif;
+  color: #e21a41;
+}
+
 p, a {
   font-family: "Lora", serif;
   color: var(--text);
@@ -114,6 +119,13 @@ p, a {
   color: #999999;
   font-size: 0.9em;
   font-family: "Libre Franklin"
+}
+
+.hike-details {
+  color: var(--sage);
+  font-size: 1.2rem;
+  font-family: "Libre Franklin";
+  color: var(--muted-text);
 }
 
 .author {
@@ -423,7 +435,7 @@ p, a {
   --text: #111111;
   --heading: #e21a41;
   --muted: #909090;
-  --muted-text: #838383;
+  --muted-text: #797979;
 
   --tab-bg: #d6d6d6;
   --tab-striped-bg: #e0e0e0;
@@ -439,7 +451,7 @@ p, a {
   --ice-blue: #64ffda;
   --warm-gold: #ffcc66;
   --lime: #a8ff60;
-  --sage: #5caf52;
+  --sage: #4d9345;
 }
 
 /* Dark theme */
@@ -448,7 +460,7 @@ html[data-theme="dark"] {
   --text: #f6f2e5;
   --heading: #e21a41;
   --muted: #595b5e;
-  --muted-text: #acacac;
+  --muted-text: #b9b9b9;
 
   --tab-bg: #212529;
   --tab-striped-bg: #2c3034;
