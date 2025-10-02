@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Wilson Cunningham</title>
+    <title><%= content_for?(:title) ? yield(:title) : "Wilson Cunningham" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Official website of Wilson Cunningham — professional baseball pitcher, scholar, and adventurer.">
+    <meta name="description" content="Wilson Cunningham – University of Chicago graduate in Computational & Applied Mathematics and former professional athlete.">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
