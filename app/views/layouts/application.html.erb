@@ -114,7 +114,7 @@
                 type="button" aria-label="Toggle theme" data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i class="bi bi-moon-stars-fill theme-icon-active"></i>
+                <i class="bi bi-sun-fill theme-icon-active"></i>
                 <span class="d-lg-none ms-2 navigation-link" id="themeMenuText">Toggle theme</span>
               </button>
                 
@@ -184,7 +184,7 @@
           const icon = document.querySelector('.theme-icon-active');
           if (icon) {
             icon.className = 'bi theme-icon-active fs-5 ' + 
-              (theme === 'light' ? 'bi-moon-stars-fill' : 'bi-sun-fill');
+              (theme === 'light' ? 'bi-sun-fill' : 'bi-moon-stars-fill');
           }
 
           const toggleBtn = document.getElementById('themeMenu');
