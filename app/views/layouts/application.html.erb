@@ -70,7 +70,7 @@
 
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary bg-dark libre-franklin" data-bs-theme="dark">
       <div class="container">
-        <a class="libre-franklin navbar-brand" href="/"><strong>Wilson Cunningham</strong></a>
+        <a class="libre-franklin navbar-brand nav-link" href="/"><strong>Wilson Cunningham</strong></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -86,7 +86,9 @@
               <a class="libre-franklin nav-link" href="/career">CAREER</a>
             </li>
             <li class="nav-item">
-              <a class="libre-franklin nav-link" href="https://projects.wilsoncunningham.com" target="_blank">PROJECTS</a>
+              <a class="libre-franklin nav-link" href="https://projects.wilsoncunningham.com" target="_blank">PROJECTS
+                <i class="bi ms-1 bi-box-arrow-up-right"></i>
+              </a>
             </li>
 
             <% if current_user && current_user.admin? %>
