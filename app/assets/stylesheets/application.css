@@ -88,6 +88,13 @@ p, a {
 .dark-grey {
   color: #161618;
 }
+
+
+.bg-navbar {
+  background-color: var(--bg-navbar);
+}
+
+
 .bg-standard {
   background-color: var(--background)
 }
@@ -368,9 +375,9 @@ p, a {
   border-radius: 5px;
 }
 
-.footer-box {
+/* .footer-box {
   background-color: #2b3035;
-}
+} */
 
 .footer-link {
   font-family: "Libre Franklin";
@@ -426,8 +433,6 @@ p, a {
   padding: 2rem;
 } */
 
-/* TESTING COLOR THEMES BELOW */
-
 
 /* Light theme (default) */
 :root {
@@ -436,6 +441,8 @@ p, a {
   --heading: #e21a41;
   --muted: #909090;
   --muted-text: #797979;
+
+  --bg-navbar: #1e2a38;
 
   --tab-bg: #d6d6d6;
   --tab-striped-bg: #e0e0e0;
@@ -461,6 +468,8 @@ html[data-theme="dark"] {
   --heading: #e21a41;
   --muted: #595b5e;
   --muted-text: #b9b9b9;
+
+  --bg-navbar: #2b2f36;
 
   --tab-bg: #212529;
   --tab-striped-bg: #2c3034;
