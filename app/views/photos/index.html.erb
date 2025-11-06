@@ -1,0 +1,21 @@
+<div class="container page-content py-5">
+
+  <h1>Photo Gallery</h1>
+
+  <div class="row g-3">
+    <% @photos.each do |photo| %>
+      <div class="col-6 col-md-4 col-lg-3 text-center">
+        <% if photo.image.attached? %>
+          <%= image_tag photo.image.variant(resize_to_limit: [1200, 1200]) %>
+        <% end %>
+        <p class="fw-semibold mt-2"><%= photo.title %></p>
+        <p class="small text-muted"><%= photo.caption %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <p class="mt-4">
+    <%= link_to "Upload New Photo", new_photo_path, class: "btn btn-secondary" %>
+  </p>
+  
+</div>

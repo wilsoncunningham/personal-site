@@ -483,6 +483,7 @@ DEPENDENCIES
   grade_runner (~> 0.0.13)
   htmlbeautifier
   http
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   kaminari

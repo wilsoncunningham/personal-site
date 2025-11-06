@@ -47,4 +47,6 @@ Rails.application.routes.draw do
   get("/rake_tasks", { :controller => "rake_tasks", :action => "show" })
   get("/run_task", { :controller => "rake_tasks", :action => "run_task" })
 
+  resources :photos
+
 end
