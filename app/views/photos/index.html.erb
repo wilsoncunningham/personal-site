@@ -10,6 +10,12 @@
         <% end %>
         <p class="fw-semibold mt-2"><%= photo.title %></p>
         <p class="small text-muted"><%= photo.caption %></p>
+        
+        <%= button_to "Delete",
+              photo_path(photo),
+              method: :delete,
+              data: { confirm: "Are you sure?" },
+              class: "btn btn-danger btn-sm" %>
       </div>
     <% end %>
   </div>

@@ -13,4 +13,5 @@
 class Photo < ApplicationRecord
   has_one_attached :image   # links to Active Storage
   default_scope { order(position: :asc) }  # optional: keeps gallery ordered
+  has_one_attached :image, dependent: :purge_later
 end

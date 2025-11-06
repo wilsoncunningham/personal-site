@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
 
   before_action :require_admin
+  before_action :set_photo, only: [:destroy]
 
   def index
     @photos = Photo.all
@@ -18,8 +19,17 @@ class PhotosController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+  
+  def destroy
+    @photo.destroy
+    redirect_to photos_path, notice: "Photo deleted."
+  end
 
   private
+
+  def set_photo
+    @photo = Photo.find(params[:id])
+  end
 
   def photo_params
     params.require(:photo).permit(:title, :caption, :tag, :position, :image)
