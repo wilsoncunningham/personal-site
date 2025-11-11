@@ -8,7 +8,7 @@
         <% if photo.image.attached? %>
           <%= image_tag photo.thumbnail, class: "photo-img", alt: photo.title.presence || "Photo" %>
         <% end %>
-        <div class="photo-meta">
+        <div class="photo-meta-admin">
           <h2><%= photo.title %></h2>
           <% if photo.caption.present? %>
             <p><%= photo.caption %></p>
