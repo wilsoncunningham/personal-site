@@ -34,8 +34,7 @@
       <div class="modal-content bg-modal-content">
         <div class="modal-body">
 
-          Carousel-->
-<!--          <div id="carouselExampleCaptions" class="carousel slide">
+          <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-inner">
 
 
@@ -47,10 +46,17 @@
                 </div>
               </div>
 
-              <%# @gallery_images.each_with_index do |image, index| %>-->
-<!--                <div class="carousel-item">-->
-                  <%#= image_tag "hiking/#{image[:file]}", class: "gallery", data: { bs_index: index }, alt: image[:caption] %>
-<!--                  <p class="caption text-end"><%#= image[:caption] %></p>
+              <%# @photos.each_with_index do |photo, index| %>-->
+<!--                <div class="photo-card">-->
+                  <%# if photo.image.attached? %>
+                    <%#= image_tag photo.image, class: "photo-img", alt: photo.title.presence || "Photo" %>
+                  <%# end %>
+<!--                  <div class="photo-meta">
+                    <h2><%#= photo.title %></h2>
+                    <%# if photo.caption.present? %>-->
+<!--                      <p><%#= photo.caption %></p>-->
+                    <%# end %>
+<!--                  </div>
                 </div>
               <%# end %>-->
 <!--
