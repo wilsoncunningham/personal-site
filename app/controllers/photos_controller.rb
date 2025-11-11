@@ -53,6 +53,7 @@ class PhotosController < ApplicationController
   end
   
   def destroy
+    @photo.image.purge if @photo.image.attached?
     @photo.destroy
     redirect_to photos_path, notice: "Photo deleted."
   end
