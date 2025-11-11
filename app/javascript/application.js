@@ -50,7 +50,7 @@ document.addEventListener('turbo:load', () => {
   
   if (!photoCards.length || !loadMoreBtn) return;
   
-  const itemsPerLoad = 2; // 3 rows × 3 columns (approximate)
+  const itemsPerLoad = 8;
   let currentlyShown = 0;
   
   function showMorePhotos() {
@@ -79,4 +79,3 @@ document.addEventListener('turbo:load', () => {
   // Load more on button click
   loadMoreBtn.addEventListener('click', showMorePhotos);
 });
-
