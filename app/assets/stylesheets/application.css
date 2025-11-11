@@ -273,6 +273,10 @@ p, a {
   opacity: 1;
 }
 
+.carousel-close-btn {
+  font-family: Libre Franklin;
+}
+
 .gallery-snapshot {
   max-height: 400px;
   min-height: 260px;
@@ -326,8 +330,7 @@ p, a {
 }
 
 .photo-card {
-  background: #fff;
-  border-radius: 0.3rem;
+  background: var(--gallery-card-bg-color);
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: none;
@@ -354,17 +357,18 @@ p, a {
 
 .photo-meta {
   padding: 0.75rem 1rem 1rem;
+  display: none;
 }
 
 .photo-meta h2 {
   font-size: 1.4rem;
   margin: 0 0 0.25rem;
-  color: #4d9345
+  color: var(--sage)
 }
 
 .photo-meta p {
   margin: 0;
-  color: #333;
+  color: var(--gallery-card-p-color);
   font-size: 0.9rem;
 }
 
@@ -385,6 +389,28 @@ p, a {
     aspect-ratio: auto;
     max-height: 75vh;
     object-fit: cover;  /* No cropping, preserve ratio */
+  }
+
+  .photo-meta {
+    display: block;
+    padding: 0.6rem 0.75rem 0.85rem;
+  }
+
+  .photo-meta h2 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .photo-meta p {
+    font-size: 0.85rem;
+  }
+
+  .carousel-caption-below h2 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption-below p {
+    font-size: 1rem;
   }
 }
 
@@ -575,6 +601,9 @@ p, a {
   --tab-color: #111111;
   --tab-border-color: #e0e0e0;
 
+  --gallery-card-bg-color: #fff;
+  --gallery-card-p-color: #333;
+
   --theme-icon-color: rgb(121, 167, 218);
   --off-white: #f6f2e5;
   --fire-red: #e21a41;
@@ -601,6 +630,9 @@ html[data-theme="dark"] {
   --tab-hover-color: #f8f9fa;
   --tab-color: #f8f9fa;       /* text color */
   --tab-border-color: #2c3034;   /* border */
+
+  --gallery-card-bg-color: #2b2f36;
+  --gallery-card-p-color: #fff;
 
   --theme-icon-color: #fde31e;
   --off-white: #f6f2e5;
