@@ -39,3 +39,44 @@ document.addEventListener('turbo:load', () => {
     carousel.to(targetIndex);
   });
 });
+
+// Photo Gallery - Load More functionality
+document.addEventListener('turbo:load', () => {
+  const photoGrid = document.querySelector('.photo-grid');
+  if (!photoGrid) return;
+  
+  const photoCards = photoGrid.querySelectorAll('.photo-card');
+  const loadMoreBtn = photoGrid.parentElement.querySelector('.load-more-btn');
+  
+  if (!photoCards.length || !loadMoreBtn) return;
+  
+  const itemsPerLoad = 2; // 3 rows × 3 columns (approximate)
+  let currentlyShown = 0;
+  
+  function showMorePhotos() {
+    const toShow = currentlyShown + itemsPerLoad;
+    
+    for (let i = currentlyShown; i < toShow && i < photoCards.length; i++) {
+      photoCards[i].classList.add('visible');
+    }
+    
+    currentlyShown = toShow;
+    
+    // Hide button if all photos are shown
+    if (currentlyShown >= photoCards.length) {
+      loadMoreBtn.classList.remove('show');
+    }
+  }
+  
+  // Initial load
+  showMorePhotos();
+  
+  // Show button if there are more photos to load
+  if (currentlyShown < photoCards.length) {
+    loadMoreBtn.classList.add('show');
+  }
+  
+  // Load more on button click
+  loadMoreBtn.addEventListener('click', showMorePhotos);
+});
+

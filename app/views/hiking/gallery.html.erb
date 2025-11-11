@@ -4,8 +4,14 @@
 
 <div class="container page-content py-5">
 
-  <div class="py-5">
+  <div class="pt-5">
     <h1 class="sage"><em>Hiking Photo Gallery</em></h1>
+  </div>
+
+  <div class="py-4">
+    <p>
+      Click on any image preview to view in full-screen.
+    </p>
   </div>
 
   <div class="photo-grid">
@@ -13,9 +19,11 @@
       <div class="photo-card" role="button"
             data-bs-toggle="modal"
             data-bs-target="#galleryModal"
-            data-bs-slide-to="<%= index %>">
+            data-bs-slide-to="<%= index %>"
+            data-photo-index="<%= index %>">
         <% if photo.image.attached? %>
-          <%= image_tag photo.image, class: "photo-img", alt: photo.title.presence || "Photo" %>
+          <%= image_tag photo.thumbnail , loading: "lazy",
+                class: "photo-img", alt: photo.title.presence || "Photo" %>
         <% end %>
         <div class="photo-meta">
           <h2><%= photo.title %></h2>
@@ -27,8 +35,10 @@
     <% end %>
   </div>
 
+  <div class="text-center my-4">
+    <button class="load-more-btn btn btn-secondary" style="font-family: Libre Franklin">View More</button>
+  </div>
 
-<!--   Modal -->
   <div class="modal fade bg-modal-dark" id="galleryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content bg-modal-content">
@@ -50,7 +60,6 @@
                   </div>
                 </div>
               <% end %>
-
 
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselHikingGallery" data-bs-slide="prev">

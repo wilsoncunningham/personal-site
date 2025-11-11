@@ -17,9 +17,23 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    @photo = Photo.new(photo_params.except(:image))
+
+    if params[:photo][:image].present?
+      processed = ImageProcessing::Vips
+                    .source(params[:photo][:image])
+                    .resize_to_limit(1600, 1600)
+                    .call
+
+      @photo.image.attach(
+        io: File.open(processed.path),
+        filename: params[:photo][:image].original_filename,
+        content_type: params[:photo][:image].content_type
+      )
+    end
+
     if @photo.save
-      redirect_to photos_path, notice: "Photo added successfully."
+      redirect_to photos_path
     else
       render :new, status: :unprocessable_entity
     end

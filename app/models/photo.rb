@@ -14,4 +14,13 @@ class Photo < ApplicationRecord
   has_one_attached :image   # links to Active Storage
   default_scope { order(position: :asc) }  # optional: keeps gallery ordered
   has_one_attached :image, dependent: :purge_later
+
+  def thumbnail
+    image.variant(resize_to_limit: [900, 900]).processed if image.attached?
+  end
+  
+  def display
+    image.variant(resize_to_limit: [1200, 1200]).processed if image.attached?
+  end
+
 end

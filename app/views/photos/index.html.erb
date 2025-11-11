@@ -6,13 +6,14 @@
     <% @photos.each do |photo| %>
       <div class="photo-card">
         <% if photo.image.attached? %>
-          <%= image_tag photo.image, class: "photo-img", alt: photo.title.presence || "Photo" %>
+          <%= image_tag photo.thumbnail, class: "photo-img", alt: photo.title.presence || "Photo" %>
         <% end %>
         <div class="photo-meta">
           <h2><%= photo.title %></h2>
           <% if photo.caption.present? %>
             <p><%= photo.caption %></p>
           <% end %>
+          <p><%= photo.image.metadata %>
         </div>
         
         <%= link_to "Edit", edit_photo_path(photo), class: "btn btn-primary btn-sm" %>
@@ -23,5 +24,9 @@
   <p class="mt-4">
     <%= link_to "Upload New Photo", new_photo_path, class: "btn btn-secondary" %>
   </p>
+
+  <div class="text-center my-4">
+    <button class="load-more-btn btn btn-secondary" style="font-family: Libre Franklin">View More</button>
+  </div>
   
 </div>
