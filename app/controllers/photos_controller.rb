@@ -3,6 +3,11 @@ class PhotosController < ApplicationController
   before_action :require_admin
   before_action :set_photo, only: [:destroy]
 
+  def gallery
+    @photos = Photo.all
+    render({:template => "hiking/gallery"})
+  end
+
   def index
     @photos = Photo.all
   end

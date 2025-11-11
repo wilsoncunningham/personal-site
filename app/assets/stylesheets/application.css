@@ -273,6 +273,53 @@ p, a {
   font-family: "Libre Franklin";
 }
 
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.photo-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.photo-meta {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.photo-meta h2 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+}
+
+.photo-meta p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+
 .bg-modal-dark .modal-content {
   background-color: #161618; 
   color: #f6f2e5; 
