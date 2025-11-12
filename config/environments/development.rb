@@ -85,4 +85,11 @@ Rails.application.configure do
 
   # Allow POST authenticity on Codespaces in dev
   config.action_controller.forgery_protection_origin_check = false
+
+
+  # NEW ADDITION TO HELP WITH IMAGES
+  config.active_storage.service = :cloudinary
+
+
+
 end
