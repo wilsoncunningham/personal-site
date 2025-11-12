@@ -35,11 +35,25 @@ class PhotosController < ApplicationController
         render :new, status: :unprocessable_entity and return
       end
 
-      @photo.image.attach(
-        io: uploaded.open,
-        filename: uploaded.original_filename,
-        content_type: uploaded.content_type
-      )
+      # Resize the image BEFORE attaching to reduce memory usage
+      begin
+        processed = ImageProcessing::Vips
+                      .source(uploaded.tempfile)
+                      .resize_to_limit(1600, 1600)
+                      .convert("jpg")
+                      .saver(quality: 85)
+                      .call
+
+        @photo.image.attach(
+          io: File.open(processed.path),
+          filename: uploaded.original_filename.sub(/\.\w+$/, '.jpg'),
+          content_type: 'image/jpeg'
+        )
+      rescue => e
+        Rails.logger.error "Image processing failed: #{e.message}"
+        flash.now[:alert] = "Failed to process image. Please try a different file."
+        render :new, status: :unprocessable_entity and return
+      end
     end
 
     if @photo.save

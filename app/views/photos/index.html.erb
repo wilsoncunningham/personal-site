@@ -2,6 +2,10 @@
 
   <h1>Photo Gallery</h1>
 
+  <p class="mt-4">
+    <%= link_to "Upload New Photo", new_photo_path, class: "btn btn-secondary" %>
+  </p>
+
   <div class="photo-grid">
     <% @photos.each do |photo| %>
       <div class="photo-card">
@@ -20,10 +24,6 @@
       </div>
     <% end %>
   </div>
-
-  <p class="mt-4">
-    <%= link_to "Upload New Photo", new_photo_path, class: "btn btn-secondary" %>
-  </p>
 
   <div class="text-center my-4">
     <button class="load-more-btn btn btn-secondary" style="font-family: Libre Franklin">View More</button>
