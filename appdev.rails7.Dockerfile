@@ -28,6 +28,11 @@ RUN yes | unminimize \
     && useradd -l -u 33334 -G sudo -md /home/student -s /bin/bash -p student student \
     # Passwordless sudo for users in the 'sudo' group
     && sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
+
+# Added for jemalloc. DONE BY WILSON
+ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
+ENV MALLOC_CONF="background_thread:true,dirty_decay_ms:1000,muzzy_decay_ms:1000,metadata_thp:auto"
+
 ENV HOME=/home/student
 
 ### Student user ###
