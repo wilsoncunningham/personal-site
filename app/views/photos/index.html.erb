@@ -10,7 +10,16 @@
     <% @photos.each do |photo| %>
       <div class="photo-card">
         <% if photo.image.attached? %>
-          <%= image_tag photo.thumbnail, class: "photo-img", alt: photo.title.presence || "Photo" %>
+
+          <%= cl_image_tag(
+                photo.image.blob.key,    # public ID
+                width: 900, height: 900, crop: :limit,
+                angle: :exif,                         # <<< fixes the upside-down issue
+                fetch_format: :auto, quality: "auto", # delivery optimization
+                loading: "lazy", class: "photo-img",
+                alt: photo.title.presence || "Photo"
+              ) %>
+              
         <% end %>
         <div class="photo-meta-admin">
           <h2><%= photo.title %></h2>
