@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
 
-  before_action :require_admin
+  before_action :require_admin, except: [:gallery]
   before_action :set_photo, only: [:destroy]
 
   def gallery
