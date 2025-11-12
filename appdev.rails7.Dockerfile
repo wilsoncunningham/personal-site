@@ -20,6 +20,7 @@ RUN yes | unminimize \
         graphviz=2.42.2-3build2 \
         psmisc \
         redis-server=5:5.0.7-2ubuntu0.1 \
+        libjemalloc2 \
     && locale-gen en_US.UTF-8 \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* \
     # Container user
