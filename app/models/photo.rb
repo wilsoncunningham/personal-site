@@ -11,23 +11,23 @@
 #  updated_at :datetime         not null
 #
 class Photo < ApplicationRecord
-  has_one_attached :image, dependent: :purge_later do |a|
-    a.variant :thumbnail, resize_to_limit: [900, 900]    # safe, but we won't use this in the grid
-    a.variant :display,   resize_to_limit: [1200, 1200]
+  # single attachment via Active Storage
+  has_one_attached :image, dependent: :purge_later
+
+  default_scope { order(position: :asc) }  # keeps gallery ordered
+
+  # Return variants without forcing processing here. Avoid calling
+  # `.processed` in the request path so variant generation can be
+  # handled asynchronously (reduces memory and CPU pressure during
+  # web requests). Views/helpers can call `url_for(photo.thumbnail)`
+  # — Active Storage will lazily generate the variant when requested
+  # or via a background worker.
+  def thumbnail
+    image.variant(resize_to_limit: [900, 900]) if image.attached?
   end
 
-  default_scope { order(position: :asc) }
-
-  validate :acceptable_image
-
-  def acceptable_image
-    return unless image.attached?
-    if image.blob.byte_size > 8.megabytes
-      errors.add(:image, "is too large (max 8 MB)")
-    end
-    acceptable_types = %w[image/jpeg image/png image/webp]
-    unless acceptable_types.include?(image.blob.content_type)
-      errors.add(:image, "must be a JPG, PNG, or WEBP")
-    end
+  def display
+    image.variant(resize_to_limit: [1200, 1200]) if image.attached?
   end
+
 end

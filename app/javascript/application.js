@@ -4,10 +4,6 @@ import "controllers"
 
 Turbo.session.drive = false
 
-// === Active Storage (for direct uploads) ===
-import * as ActiveStorage from "@rails/activestorage"
-ActiveStorage.start()
-
 import jquery from "jquery";
 window.jQuery = jquery;
 window.$ = jquery;

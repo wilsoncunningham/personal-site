@@ -5,7 +5,7 @@
   <%= form_with model: @photo, local: true, html: { multipart: true } do |f| %>
     <div class="mb-3">
       <%= f.label :image %>
-      <%= f.file_field :image, direct_upload: true, class: "form-control" %>
+      <%= f.file_field :image, class: "form-control" %>
     </div>
 
     <div class="mb-3">
